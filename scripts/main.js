@@ -3,6 +3,7 @@
 
 $(document).ready(function() {
   newUser();
+  addNonHardCodeData()
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
     // once: true  
@@ -42,6 +43,17 @@ $('a.smooth-scroll')
     }
   }
 });
+
+function addNonHardCodeData(){
+
+  //birthday
+
+  var birthday = new Date(1989,1,10).getTime()
+  var now = new Date()
+
+  var milissecondDiff = now - birthday;
+  $("#ageInput").append()
+}
 
 function newUser(){
   $.ajax({
