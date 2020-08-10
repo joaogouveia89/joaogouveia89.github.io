@@ -2,7 +2,6 @@
 // Don't forget to add it into respective layouts where this js file is needed
 
 $(document).ready(function() {
-  addNonHardCodeData()
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
     // once: true  
@@ -42,14 +41,3 @@ $('a.smooth-scroll')
     }
   }
 });
-
-function addNonHardCodeData(){
-  //birthday
-  var today = new Date();
-  var birthday = new Date(1989,1,10);
-
-  var age = new Number((today.getTime() - birthday.getTime()) / 31536000000).toFixed(0);
-
-//do the same for the skills
-  $("#ageInput").append(age);
-}
