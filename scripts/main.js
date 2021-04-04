@@ -1,11 +1,22 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
 
+function getAge(){
+  let today = new Date().getTime()
+  let birthday = new Date("February 10, 1989").getTime()
+  let difference = (today - birthday)
+
+  return Math.floor(difference/(1000*60*60*24*365))
+}
+
 $(document).ready(function() {
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
     // once: true  
   }); // initialize animate on scroll library
+
+  const age = getAge()
+  $("#agefield").html(age);
 });
 
 // Smooth scroll for links with hashes

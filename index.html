@@ -17,7 +17,7 @@
     <meta name="description" content="Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skils and experience."/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
     <link href="css/aos.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
@@ -34,7 +34,6 @@
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#hobbies">Hobbies</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
@@ -55,7 +54,6 @@
           <div class="cc-profile-image"><a href="#"><img src="images/perfil.png" alt="Image"/></a></div>
           <div class="h2 title">João Gouveia</div>
           <p class="category text-white">Software Engineer</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hire Me</a><a class="btn btn-primary" href="https://drive.google.com/file/d/1C9xiBpcla9LlORqbss0GIuNLuO5rn6Uj/view" target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
-          <div style="padding-top: 10px"><img src="https://projecteuler.net/profile/joaogouveia89.png"></div>
         </div>
       </div>
       <div class="section">
@@ -82,7 +80,7 @@
             <div class="h3 mt-0 title">Basic Information</div>
             <div class="row">
               <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-              <div class="col-sm-8">31</div>
+              <div class="col-sm-8" id="agefield"></div>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
@@ -98,7 +96,7 @@
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-              <div class="col-sm-8">Portuguese, English, Spanish, German</div>
+              <div class="col-sm-8">Portuguese, English</div>
             </div>
           </div>
         </div>
@@ -214,105 +212,6 @@
   </div>
 </div>
 
-<div class="section" id="hobbies">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 ml-auto mr-auto">
-        <div class="h3 text-center mb-4 title">Hobbies</div>
-        <p class="text-center"><iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/19343024/activity-summary/d3480b9921f506695f743c249a6fc275433a21d6'></iframe></p>
-        <div class="nav-align-center">
-          <ul class="nav nav-pills nav-pills-primary" role="tablist">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#bike" role="tablist"><i class="fa fa-bicycle" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#travel" role="tablist"><i class="fa fa-plane" aria-hidden="true"></i></a></li>
-            <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#music" role="tablist"><i class="fa fa-music" aria-hidden="true"></i></a></li> -->
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="tab-content gallery mt-5">
-      <div class="tab-pane active" id="bike">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/bike1.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3">Lagoa da Pampulha</div>
-                      <p>19km</p>
-                    </figcaption>
-                  </figure></a></div>
-
-            </div>
-            <div class="col-md-6">
-                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                    <figure class="cc-effect"><img src="images/bike2.jpg" alt="Image"/>
-                      <figcaption>
-                        <div class="h3">Praça do Papa</div>
-                        <p>20km</p>
-                      </figcaption>
-                    </figure></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="travel" role="tabpanel">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/punta.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3" style="color: #000">Punta del Este - Uruguay</div>
-                      <p>2015</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/rio.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3">Rio de Janeiro - Brazil</div>
-                      <p>2017</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/IMG_20190425_125218616.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3">Lisbon - Portugal</div>
-                      <p>2019</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/IMG_20191119_195509001.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3">Munich - Germany</div>
-                      <p>2019</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/IMG_20200209_144641.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h3" style="color: #000">London - England</div>
-                      <p>2020</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="section" id="experience">
   <div class="container cc-experience">
     <div class="h3 text-center mb-4 title">Work Experience</div>
