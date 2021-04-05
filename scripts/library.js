@@ -114,6 +114,12 @@ let solutions = [
 		"platform": "Hacker Rank",
 		"languages": ["jv", "kt", "rb"],
 		"descriptionLink": "https://www.hackerrank.com/challenges/minimum-distances/problem"
+	},
+	{
+		"problemName": "Repeated String",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/repeated-string/problem"
 	}
 ]
 
