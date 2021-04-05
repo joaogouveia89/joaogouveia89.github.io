@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>New Year Chaos - Kotlin</title>
+</head>
+<body class="dark-theme">
+    <code>
+        <pre>
+import kotlin.collections.*
+
+// GOT SOLUTION IDEA FROM DISCUSSIONS
+/*
+* Since the question only asks the number of bribes, there's no need to really do a sorting, nor element swapping, nor "bubbling up" an element. All you need to do is to count the number of people who overtake a person.
+    */
+
+fun minimumBribes(q: Array<Int>): Unit {
+    var bribes = 0
+    var tooChaotic = false
+
+    q.forEachIndexed{ idx, element ->
+        if(element - (idx + 1) > 2){
+            tooChaotic = true
+            return@forEachIndexed
+        }
+        var j = if(element < 2) 0 else (element -2)
+        while(j < idx){
+            if(q[j] > element){
+                bribes++
+            } 
+            j++
+        }
+    }
+
+    println(if(tooChaotic) "Too chaotic" else bribes.toString())
+}
+
+fun main(args: Array<String>) {
+    val q = args.map{
+        it.toInt()
+    }.toTypedArray()
+
+    minimumBribes(q)
+}
+    </pre>
+    </code>
+</body>
+</html>

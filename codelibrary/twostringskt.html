@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>Two Strings - Kotlin</title>
+</head>
+<body class="dark-theme">
+    <code>
+        <pre>
+// The already search list is important to avoid multiple searchs on repeated characters and then avoid timeouts
+fun twoStrings(s1: String, s2: String): String {
+    var share = false
+    var idx = 0
+    var s1Length = s1.length
+    var alreadySearchedList = mutableListOf<Char>()
+    var alreadySearched = true
+    
+    while(idx < s1Length && !share){
+        alreadySearched = true
+        
+        if(s1[idx] !in alreadySearchedList){
+            alreadySearchedList.add(s1[idx])
+            alreadySearched = false
+        }
+        if(!alreadySearched && s2.indexOf(s1[idx]) != -1){
+            share = true
+        }
+        idx++
+    }
+
+    return if(share) "YES" else "NO"
+}
+
+fun main(args: Array<String>) {
+    
+    val result = twoStrings(args[0], args[1])
+
+    println(result)
+}
+    </pre>
+    </code>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>The Hurdle Race - Kotlin</title>
+</head>
+<body class="dark-theme">
+    <code>
+        <pre>
+fun Array<Int>.max(): Int{
+    var currentMax = get(0)
+    forEach{
+        if(currentMax < it){
+            currentMax = it
+        }
+    }
+    return currentMax
+}
+
+fun hurdleRace(k: Int, height: Array<Int>): Int {
+    val maxHeight = height.max()
+    return if((maxHeight - k) <= 0) 0 else  (maxHeight - k);
+}
+
+fun main(args: Array<String>) {
+    val height = args.map{el ->
+        el.toInt() 
+    }.slice(1..(args.size - 1)).toTypedArray()
+
+    val k = args[0].toInt()
+
+    val result = hurdleRace(k, height)
+
+    println(result)
+}
+    </pre>
+    </code>
+</body>
+</html>
