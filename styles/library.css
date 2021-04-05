@@ -43,7 +43,15 @@ h3.title {
   padding-left: 20px;
 }
 
+.marginl20{
+  margin-left: 20px;
+}
+
 .dark-theme{
   background-color: black;
   color: white;
+}
+
+li > a {
+  float: right;
 }

@@ -72,6 +72,12 @@ let solutions = [
 		"platform": "Hacker Rank",
 		"languages": ["kt"],
 		"descriptionLink": "https://www.hackerrank.com/challenges/two-strings/problem"
+	},
+	{
+		"problemName": "Equalize the Array",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/equality-in-a-array/problem"
 	}
 ]
 
@@ -123,19 +129,24 @@ function generateSolutionsList(){
 
 			var icon = document.createElement("i");
 			icon.classList.add("devicon-" + languages[solutions[i].languages[j]].toLowerCase() + "-plain");
+			icon.classList.add("colored")
 
 			var span =  document.createElement("span");
 			span.classList.add("list-icon-padding");
 			span.insertAdjacentHTML('afterbegin', solutions[i].problemName + " - " + solutions[i].platform)
 
 			var linkCode = document.createElement("a");
-			linkCode.classList.add("paddingl20");
+			linkCode.classList.add("marginl20");
+			linkCode.classList.add("btn");
+			linkCode.classList.add("btn-outline-primary");
 			linkCode.setAttribute('target', '_blank');
 			linkCode.setAttribute('href', 'codelibrary/' + solutions[i].problemName.toLowerCase().replaceAll(" ", "") + solutions[i].languages[j] + ".html")
 			linkCode.insertAdjacentHTML('afterbegin',"Code");
 
 			var linkDescription = document.createElement("a");
-			linkDescription.classList.add("paddingl20");
+			linkDescription.classList.add("marginl20");
+			linkDescription.classList.add("btn");
+			linkDescription.classList.add("btn-outline-primary");
 			linkDescription.setAttribute('target', '_blank');
 			linkDescription.setAttribute('href',solutions[i].descriptionLink)
 			linkDescription.insertAdjacentHTML('afterbegin',"Description");
