@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Drawing Book - Ruby</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+def drawing_book n, p
+	if n % 2 == 0
+		range = if(n / 2 >= p)
+			[0, p]
+		else
+			[p, n]
+		end
+	else
+		range = if(n / 2.to_f > p)
+			[1, p]
+		else
+			[p, n - 1]
+		end
+	end
+
+	diff = range[1] - range[0]
+
+	result = if(range[0] == 0)
+		(diff/2.to_f).floor
+	else
+		(diff/2.to_f).ceil
+	end
+	
+	result
+end
+		</pre>
+	</code>
+</body>
+</html>

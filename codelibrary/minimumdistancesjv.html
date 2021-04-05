@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Minimum Distances - Java</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+public class MinimumDistances{
+	public static int run(int[] a){
+		HashMap<Integer, Integer> valuesChecked = new HashMap<Integer, Integer>();
+		int minDist = -1;
+		int dist = minDist;
+
+		for(int i = 0; i < a.length; i++){
+			if(valuesChecked.containsKey(a[i])){
+				dist = i - valuesChecked.get(a[i]);
+				if(minDist == -1 || minDist > dist){
+					minDist = dist;
+				}
+			}
+			valuesChecked.put(a[i], i);
+		}
+		return minDist;
+	}
+}
+		</pre>
+	</code>
+</body>
+</html>

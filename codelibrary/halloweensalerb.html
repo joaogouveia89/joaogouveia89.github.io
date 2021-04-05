@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Halloween Sale - Ruby</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+def halloween_sale p, d, m, s
+
+	return 0 if(s < p)
+
+	#arithmetic progression
+	last_n = (((m - p)/d.to_f * (-1)) + 1)
+
+	unless last_n === last_n.ceil
+		last_n = last_n.floor
+	end
+
+	an = p + (last_n - 1) * (d * -1)
+
+	# arithmetic progression sum of terms
+	sum = ((p + an) * last_n) / 2 
+
+	number_of_games = if sum > s
+			sum / s
+		else
+			((p - m) / d) + 1 + ((s - sum) / m)
+		end
+
+	number_of_games.floor
+end
+		</pre>
+	</code>
+</body>
+</html>

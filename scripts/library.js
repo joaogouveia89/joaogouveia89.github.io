@@ -78,6 +78,42 @@ let solutions = [
 		"platform": "Hacker Rank",
 		"languages": ["jv", "kt", "rb"],
 		"descriptionLink": "https://www.hackerrank.com/challenges/equality-in-a-array/problem"
+	},
+	{
+		"problemName": "Minimum Swipes 2",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/minimum-swaps-2/problem"
+	},
+	{
+		"problemName": "Counting Valleys",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/counting-valleys/problem"
+	},
+	{
+		"problemName": "Drawing Book",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/drawing-book/problem"
+	},
+	{
+		"problemName": "The Time in Words",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/the-time-in-words/problem"
+	},
+	{
+		"problemName": "Halloween Sale",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/halloween-sale/problem"
+	},
+	{
+		"problemName": "Minimum Distances",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/minimum-distances/problem"
 	}
 ]
 

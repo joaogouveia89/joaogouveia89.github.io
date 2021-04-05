@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Minimum Swipes 2 - Ruby</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+def minimumSwaps(arr)
+    min = 1
+    swaps = 0
+
+    arr.each.with_index do |el, idx|
+        suposed_place = el - min
+        unless (suposed_place == idx)
+            while suposed_place != idx
+                current_place = suposed_place
+                suposed_place = arr[suposed_place] - min
+                arr[current_place], arr[idx] = arr[idx], arr[current_place]
+                swaps = swaps + 1
+            end
+        end
+    end
+    swaps
+end
+		</pre>
+	</code>
+</body>
+</html>

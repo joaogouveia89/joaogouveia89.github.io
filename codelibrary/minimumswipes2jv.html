@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Minimum Swipes 2 - Java</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+public class MinimumSwipes2{
+    static int minimumSwaps(int[] arr) {
+
+        int min = 1;
+        int swaps = 0;
+        int supposedPlace;
+        int currentPlace;
+        int temp;
+        
+        for(int i = 0; i < arr.length; i++){
+            supposedPlace = arr[i] - min;
+            if(supposedPlace != i){
+               while(supposedPlace != i){
+                    currentPlace = supposedPlace;
+                    supposedPlace = arr[supposedPlace] - min;
+                    temp = arr[currentPlace];
+                    arr[currentPlace] = arr[i];
+                    arr[i] = temp;
+                    swaps++;
+               }
+            }    
+        }
+        return swaps;
+    }
+}
+		</pre>
+	</code>
+</body>
+</html>
