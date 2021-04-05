@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link href='../styles/library.css' rel='stylesheet'>
+	<title>Migratory Birds - Kotlin</title>
+<head>
+<body class='dark-theme'>
+	<code>
+		<pre>
+class MigratoryBird{
+    var id: Int = 0
+    var frequency: Int = 0
+        private set
+    
+    fun restoreFrequency(){
+        this.frequency = 1
+    }
+    
+    fun incrementFrequency(){
+        this.frequency++
+    }
+    
+    fun copy(bird: MigratoryBird){
+        this.id = bird.id
+        this.frequency = bird.frequency
+    }
+}
+
+// Complete the migratoryBirds function below.
+fun migratoryBirds(arr: Array&lt;Int&gt;): Int {
+    val currentCheckingBird = MigratoryBird()
+    val mostFrequentBird = MigratoryBird()
+    
+    arr.sort()
+    
+    arr.forEach { birdId ->
+        if(currentCheckingBird.id == birdId){
+            currentCheckingBird.incrementFrequency()
+        }else{
+            currentCheckingBird.restoreFrequency()
+            currentCheckingBird.id = birdId
+        }
+        
+        // as the array is already sorted, we dont have to compare if the mostFrequentBird id is bigger than the current one on loop
+        if(mostFrequentBird.frequency < currentCheckingBird.frequency){
+            mostFrequentBird.copy(currentCheckingBird)
+        }
+    }
+    return mostFrequentBird.id
+}
+		</pre>
+	</code>
+</body>
+</html>

@@ -120,6 +120,24 @@ let solutions = [
 		"platform": "Hacker Rank",
 		"languages": ["jv", "kt", "rb"],
 		"descriptionLink": "https://www.hackerrank.com/challenges/repeated-string/problem"
+	},
+	{
+		"problemName": "Day of the Programmer",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/day-of-the-programmer/problem"
+	},
+	{
+		"problemName": "Migratory Birds",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/migratory-birds/problem"
+	},
+	{
+		"problemName": "Subarray Division",
+		"platform": "Hacker Rank",
+		"languages": ["jv", "kt", "rb"],
+		"descriptionLink": "https://www.hackerrank.com/challenges/the-birthday-bar/problem"
 	}
 ]
 
