@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>Chocolate Feast - Java</title>
+</head>
+<body class="dark-theme">
+    <code>
+    <pre>
+public class ChocolateFeast{
+    static int chocolateFeast(int n, int c, int m) {
+        int wrappers = (int) Math.floor(n/c);
+        int ate = wrappers;
+        int aditPieces = 0;
+        int remain = 0;
+
+        while(wrappers >= m){
+            aditPieces = (int) Math.floor(wrappers / m);
+            remain = wrappers - aditPieces * m;
+            ate += aditPieces;
+            remain += aditPieces;
+            wrappers = remain;
+        }
+        
+        return ate;
+    }
+}
+    </pre>
+    </code>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>Chocolate Feast - Ruby</title>
+</head>
+<body class="dark-theme">
+    <code>
+        <pre>
+def chocolate_feast n, c, m
+
+    wrappers = (n/c).floor
+    ate = wrappers
+
+    while wrappers >= m
+        adit_pieces = (wrappers / m).floor
+
+        remain = wrappers - adit_pieces * m
+
+        ate = ate + adit_pieces
+
+        remain = remain + adit_pieces
+
+        wrappers = remain
+    end
+    
+    ate
+end
+    </pre>
+    </code>
+</body>
+</html>

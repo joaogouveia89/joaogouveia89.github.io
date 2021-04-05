@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/library.css" rel="stylesheet">
+    <title>Breaking the records - Java</title>
+</head>
+<body class="dark-theme">
+    <code>
+        <pre>
+public class BreakingTheRecords{
+    static int[] breakingRecords(int[] scores) {
+        int[] response = {0, 0};
+        
+        int lowestScore = scores[0];
+        int highestScore = lowestScore;
+        
+        for(int i = 0; i < scores.length; i++){
+            if(i != 0){
+                if(scores[i] > highestScore){
+                    highestScore = scores[i];
+                    response[0]++;
+                }
+                
+                if(scores[i] < lowestScore){
+                    lowestScore = scores[i];
+                    response[1]++;
+                }
+            }
+        }
+        
+        return response;
+    }
+}
+    </pre>
+    </code>
+</body>
+</html>
