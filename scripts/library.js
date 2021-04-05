@@ -105,6 +105,10 @@ function filter(){
 	}
 }
 
+function solutionsCompare(sol1, sol2){
+	return sol1.problemName.localeCompare(sol2.problemName);
+}
+
 function generateSolutionsList(){
 	let unorderedList = document.getElementById("solutions-list");
 
@@ -159,6 +163,8 @@ function listener(e){
 	for(var i = 0; i < viewElements.length; i++){
 		viewElements[i].elementObj.addEventListener('change', listener)
 	}
+
+	solutions.sort(solutionsCompare);
 
 	generateSolutionsList()
 })();
