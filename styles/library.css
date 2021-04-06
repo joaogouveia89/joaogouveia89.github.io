@@ -64,3 +64,16 @@ li > a {
   color: #fff;
   text-transform: uppercase;
 }
+
+hr{
+  margin-left: 10px;
+  background-color: #FFF;
+}
+
+a.language-icon{
+  color: #FFF;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 40px;
+}
+
