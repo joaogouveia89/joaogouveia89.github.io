@@ -1,13 +1,29 @@
 // Add your javascript here
 // Don't forget to add it into respective layouts where this js file is needed
+// ============== FIXED DATA =============
 
-function getAge(){
-  let today = new Date().getTime()
-  let birthday = new Date("February 10, 1989").getTime()
-  let difference = (today - birthday)
-
-  return Math.floor(difference/(1000*60*60*24*365))
-}
+let programming_languages = [
+  {
+    "name": "Kotlin",
+    "image_path": ""
+  },
+  {
+    "name": "Java",
+    "image_path": ""
+  },
+  {
+    "name": "Javascript",
+    "image_path": ""
+  },
+  {
+    "name": "Ruby",
+    "image_path": ""
+  },
+  {
+    "name": "PHP",
+    "image_url": ""
+  }
+]
 
 let experience = [
   {
@@ -36,7 +52,7 @@ let experience = [
     "description": "Internship on web and mobile development. During this almost 2 years, I worked with Ruby on Rails, NodeJS and Android, with the first one I worked the most of the time and it was about employees hour register, that was used by the company employees",
     "website": "http://avenuecode.com",
     "languages": ["Ruby", "Java"],
-    "frameworksAndPlatforms": ["Ruby on Rails", "Android", "Git", "SCRUM"]
+    "stack": ["Ruby on Rails", "Android", "Git", "SCRUM"]
   },
   {
     "company": "Athene Technologies",
@@ -46,7 +62,7 @@ let experience = [
     "description": "Worked on a Android application that receives and send data to a hardware device by Bluetooth, also the app gets the global position and works with system Broadcasts. Also I had worked on a web API in NodeJS to receive the data",
     "website": "http://athenetec.com",
     "languages": ["Javascript", "Java"],
-    "frameworksAndPlatforms": ["NodeJS", "Android", "Git", "SCRUM"]
+    "stack": ["NodeJS", "Android", "Git", "SCRUM"]
   },
   {
     "company": "Ioasys",
@@ -56,7 +72,7 @@ let experience = [
     "description": "During my period working at Ioasys I worked in many different projects, but spent most of my time in a Teachers Book Store app",
     "website": "https://ioasys.com.br",
     "languages": ["Java"],
-    "frameworksAndPlatforms": ["Android", "Git", "SCRUM"]
+    "stack": ["Android", "Git", "SCRUM"]
   },
   {
     "company": "Critical Techworks",
@@ -66,9 +82,19 @@ let experience = [
     "description": "Working on BMW products demands",
     "website": "https://www.criticaltechworks.com",
     "languages": ["Kotlin"],
-    "frameworksAndPlatforms": ["Android", "Git", "SCRUM"]
+    "stack": ["Android", "Git", "SCRUM"]
   }
 ]
+
+
+function getAge(){
+  let today = new Date().getTime()
+  let birthday = new Date("February 10, 1989").getTime()
+  let difference = (today - birthday)
+
+  return Math.floor(difference/(1000*60*60*24*365))
+}
+
 
 $(document).ready(function() {
   AOS.init( {

@@ -7278,3 +7278,8 @@ a.credit {
 .section {
   padding-bottom: 0;
 }
+
+hr{
+  margin-left: 10px;
+  background-color: #FFF;
+}
