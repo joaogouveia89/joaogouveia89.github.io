@@ -2,29 +2,6 @@
 // Don't forget to add it into respective layouts where this js file is needed
 // ============== FIXED DATA =============
 
-let programming_languages = [
-  {
-    "name": "Kotlin",
-    "image_path": ""
-  },
-  {
-    "name": "Java",
-    "image_path": ""
-  },
-  {
-    "name": "Javascript",
-    "image_path": ""
-  },
-  {
-    "name": "Ruby",
-    "image_path": ""
-  },
-  {
-    "name": "PHP",
-    "image_url": ""
-  }
-]
-
 let experience = [
   {
     "company": "TCA Automação",
@@ -49,10 +26,10 @@ let experience = [
     "start": new Date("January 15, 2015"),
     "end": new Date("October 1, 2016"),
     "position": "Intern",
-    "description": "Internship on web and mobile development. During this almost 2 years, I worked with Ruby on Rails, NodeJS and Android, with the first one I worked the most of the time and it was about employees hour register, that was used by the company employees",
+    "description": "Internship on web and mobile development. During this almost 2 years, I worked with Ruby on Rails and have a little contact with other platforms for some days or weeks, with the first one I worked the most of the time and it was about employees hour register, that was used by the company employees",
     "website": "http://avenuecode.com",
-    "languages": ["Ruby", "Java"],
-    "stack": ["Ruby on Rails", "Android", "Git", "SCRUM"]
+    "languages": ["Ruby"],
+    "stack": ["Ruby on Rails", "Git", "SCRUM"]
   },
   {
     "company": "Athene Technologies",
@@ -95,6 +72,55 @@ function getAge(){
   return Math.floor(difference/(1000*60*60*24*365))
 }
 
+function timeInWords(experienceTime){
+  var word = ""
+  var years = Math.trunc(experienceTime);
+  var months = Math.trunc(((((experienceTime - years)*100) / 100) * 12));
+
+  if(years !== 0){
+    if(years === 1){
+      word += "1 year";
+    }else{
+      word += (years + " years");
+    }
+  }
+
+  if(months !== 0){
+    if(months === 1){
+      if(word.length === 0){
+        word += "1 month";
+      }else{
+        word += " and 1 month";
+      }
+    }else{
+      if(word.length === 0){
+        word += (months + " month");
+      }else{
+        word += (" and " + months + " months");
+      }
+    }
+  }
+  return word
+}
+
+function calculateExperienceTimeForLanguages(){
+  const experienceTime = {"Ruby": 0, "Kotlin": 0, "Java": 0, "Javascript": 0}
+
+  experience.forEach(function(xp){
+    var endTime = xp.end === "Present" ? new Date() : xp.end;
+    const timexp = (endTime.getTime() - xp.start.getTime())/(1000*60*60*24*365);
+
+    // I avoided use includes function here to not iterate over the array multiple times, even it would be a more elegant solution
+    xp.languages.forEach(function(lg){
+      if(experienceTime[lg] !== undefined){
+        experienceTime[lg] += timexp;
+      }
+    });
+  });
+
+  return experienceTime;
+}
+
 
 $(document).ready(function() {
   AOS.init( {
@@ -104,6 +130,12 @@ $(document).ready(function() {
 
   const age = getAge()
   $("#agefield").html(age);
+
+  const languagesExperienceTime = calculateExperienceTimeForLanguages();
+  $("#ktxpt").html(timeInWords(languagesExperienceTime["Kotlin"]));
+  $("#rbxpt").html(timeInWords(languagesExperienceTime["Ruby"]));
+  $("#jvxpt").html(timeInWords(languagesExperienceTime["Java"]));
+  $("#jsxpt").html(timeInWords(languagesExperienceTime["Javascript"]))
 });
 
 // Smooth scroll for links with hashes
