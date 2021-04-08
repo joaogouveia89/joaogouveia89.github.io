@@ -129,6 +129,14 @@ function calculateExperienceTimeForLanguagesAndFrameworks(){
   return experienceTime;
 }
 
+function setAnalyticsEvents(){
+  //https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+  $("#nav-code-base").click(function(){
+    //clicked on code base
+    gtag('send', 'event', 'NavigationMenu', 'Clicked', 'Checked Code Base', 0);
+  })
+}
+
 
 $(document).ready(function() {
   AOS.init( {
@@ -146,6 +154,8 @@ $(document).ready(function() {
   $("#jsxpt").html(timeInWords(languagesExperienceTime["Javascript"]));
   $("#rorxp").html(timeInWords(languagesExperienceTime["Ruby on Rails"]));
   $("#andxp").html(timeInWords(languagesExperienceTime["Android"]));
+
+  setAnalyticsEvents();
 });
 
 // Smooth scroll for links with hashes
