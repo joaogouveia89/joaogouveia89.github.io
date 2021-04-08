@@ -103,8 +103,8 @@ function timeInWords(experienceTime){
   return word
 }
 
-function calculateExperienceTimeForLanguages(){
-  const experienceTime = {"Ruby": 0, "Kotlin": 0, "Java": 0, "Javascript": 0}
+function calculateExperienceTimeForLanguagesAndFrameworks(){
+  const experienceTime = {"Ruby": 0, "Kotlin": 0, "Java": 0, "Javascript": 0, "Android": 0, "Ruby on Rails": 0}
 
   experience.forEach(function(xp){
     var endTime = xp.end === "Present" ? new Date() : xp.end;
@@ -116,6 +116,14 @@ function calculateExperienceTimeForLanguages(){
         experienceTime[lg] += timexp;
       }
     });
+
+    if(xp.stack !== undefined){
+      xp.stack.forEach(function(st){
+      if(experienceTime[st] !== undefined){
+          experienceTime[st] += timexp;
+        }
+      });
+    }
   });
 
   return experienceTime;
@@ -131,11 +139,13 @@ $(document).ready(function() {
   const age = getAge()
   $("#agefield").html(age);
 
-  const languagesExperienceTime = calculateExperienceTimeForLanguages();
+  const languagesExperienceTime = calculateExperienceTimeForLanguagesAndFrameworks();
   $("#ktxpt").html(timeInWords(languagesExperienceTime["Kotlin"]));
   $("#rbxpt").html(timeInWords(languagesExperienceTime["Ruby"]));
   $("#jvxpt").html(timeInWords(languagesExperienceTime["Java"]));
-  $("#jsxpt").html(timeInWords(languagesExperienceTime["Javascript"]))
+  $("#jsxpt").html(timeInWords(languagesExperienceTime["Javascript"]));
+  $("#rorxp").html(timeInWords(languagesExperienceTime["Ruby on Rails"]));
+  $("#andxp").html(timeInWords(languagesExperienceTime["Android"]));
 });
 
 // Smooth scroll for links with hashes
