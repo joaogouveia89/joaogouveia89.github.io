@@ -133,7 +133,7 @@ function setAnalyticsEvents(){
   //https://developers.google.com/analytics/devguides/collection/analyticsjs/events
   $("#nav-code-base").click(function(){
     //clicked on code base
-    gtag('send', 'event', 'NavigationMenu', 'Clicked', 'Checked Code Base', 0);
+    ga('send', 'event', 'NavigationMenu', 'Clicked', 'Checked Code Base', 0);
   })
 }
 
