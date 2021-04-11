@@ -16,7 +16,7 @@ let solutions = [
 	{
 		"problemName": "Cats and Mouse",
 		"platform": "Hacker Rank",
-		"languages": ["kt"],
+		"languages": ["jv", "kt", "rb"],
 		"descriptionLink": "https://www.hackerrank.com/challenges/cats-and-a-mouse/problem",
 		problemDescription: "Two cats and a mouse are at various positions on a line. You will be given their starting positions. Your task is to determine which cat will reach the mouse first, assuming the mouse does not move and the cats travel at equal speed. If the cats arrive at the same time, the mouse will be allowed to move and it will escape while they fight."
 	},
