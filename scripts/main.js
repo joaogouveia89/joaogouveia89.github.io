@@ -2,6 +2,13 @@
 // Don't forget to add it into respective layouts where this js file is needed
 // ============== FIXED DATA =============
 
+let languages = {
+	jv: "Java",
+	kt: "Kotlin",
+	rb: "Ruby",
+	js: "Javascript"
+}
+
 let experience = [
   {
     "company": "TCA Automação",
@@ -62,6 +69,10 @@ let experience = [
     "stack": ["Android", "Git", "SCRUM"]
   }
 ]
+
+var handlerTimeout;
+
+const HOVER_TIMEOUT = 800;
 
 
 function getAge(){
@@ -129,12 +140,39 @@ function calculateExperienceTimeForLanguagesAndFrameworks(){
   return experienceTime;
 }
 
+function analyticsLanguageHoverEvent(event){
+  handlerTimeout = setTimeout(
+    function(){
+      const language = languages[event.target.id.split("-")[2]];
+      ga('send', 'event', 'Professional Skills', 'Checked', 'Programming Languages', language, 0);
+    }, HOVER_TIMEOUT);
+}
+
+function clearHoverTimeout(){
+  clearTimeout(handlerTimeout);
+}
+
+function analyticsProfessionalSkillsClick(event){
+  var skill = event.target.id.split("-")[1];
+  skill = skill.charAt(0).toUpperCase() + skill.slice(1);
+
+  ga('send', 'event', 'Professional Skills', 'Checked', skill, 0, 0);
+}
+
 function setAnalyticsEvents(){
   //https://developers.google.com/analytics/devguides/collection/analyticsjs/events
   $("#nav-code-base").click(function(){
-    //clicked on code base
-    ga('send', 'event', 'NavigationMenu', 'Clicked', 'Checked Code Base', 0);
+    ga('send', 'event', 'Navigation Menu', 'Clicked', 'Checked Code Base', 0);
   })
+
+  $("#ps-android").click(analyticsProfessionalSkillsClick);
+  $("#ps-rails").click(analyticsProfessionalSkillsClick);
+  $("#ps-tools").click(analyticsProfessionalSkillsClick);
+
+  $("#ps-lg-kt").hover(analyticsLanguageHoverEvent, clearHoverTimeout);
+  $("#ps-lg-jv").hover(analyticsLanguageHoverEvent, clearHoverTimeout);
+  $("#ps-lg-rb").hover(analyticsLanguageHoverEvent, clearHoverTimeout);
+  $("#ps-lg-js").hover(analyticsLanguageHoverEvent, clearHoverTimeout);
 }
 
 
