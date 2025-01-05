@@ -14,11 +14,27 @@ const resumeData = {
   description: 'Software engineer with experience in native Android development using both Kotlin and Java, and with several common libraries for development for the platform. I have a habit of optimizing my work by automating repetitive daily tasks and using a personal checklist to manage my own to-do list.',
   experiences: [
     {
+      jobTitle: 'Android engineer',
+      company: 'SIBS',
+      startDate: new Date(2024, 10, 25), // Note: In JavaScript, months are 0-indexkmmed
+      endDate: null,
+      description: 'Working on the MB Way project, focusing on maintaining and modernizing the platform by suggesting improvements to the tech stack, conducting code reviews to ensure quality, and actively participating in task planning to align development efforts with business goals.',
+      skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin']
+    },
+    {
+      jobTitle: 'Android engineer',
+      company: 'Boost IT',
+      startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
+      endDate: new Date(2024, 9, 15),
+      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability.',
+      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin']
+    },
+    {
       jobTitle: 'Mobile engineer',
       company: 'Bosch PT',
       startDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexkmmed
-      endDate: null,
-      description: 'I worked on a project called Refine My Site, which was a mobile app for Android and iOS to manage construction projects. Some functionalities implemented were camera image uploading, offline behavior, and push notifications. The mobile team was based in Portugal and Germany, but there were other teams in other countries as well.',
+      endDate: new Date(2024, 1, 2),
+      description: 'Key contributor to "Refine My Site," a mobile app for managing construction projects on Android and iOS. Developed features like image uploads, offline functionality, and push notifications, collaborating with international teams for successful project delivery.',
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
     },
     {
@@ -26,7 +42,7 @@ const resumeData = {
       company: 'Critical Techworks',
       startDate: new Date(2019, 4, 6), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
-      description: 'I worked on an Android application written in Kotlin to handle audio entertainment operations. In this project, we consumed external services like Spotify API, Apple CarPlay, and also worked with internal storage media data (USB) and tuner external interface. This project is just a part of the platform for the future generation of BMW media kit computers, so I worked alongside multiple teams in Portugal, Germany, and China.',
+      description: "Key team member in developing a Kotlin-based media player app for BMW's in-car entertainment system, supporting audio features through integrations with Spotify API, Apple CarPlay, USB storage, and tuner interfaces. Contributed feature improvements and collaborated with teams in Portugal, Germany, and China for successful project outcomes.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin', 'c++'],
     },
     {
@@ -34,7 +50,7 @@ const resumeData = {
       company: 'Ioasys',
       startDate: new Date(2018, 3, 2), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2019, 0, 4), // Note: In JavaScript, months are 0-indexed
-      description: 'Most of the time, I worked on an Android application programmed with Java, which uses MVVM, Room database, and HTTP requests using Retrofit library to handle data. Some external libraries to handle animations, also RxJava to work with reactive programming. The application is an interface between teachers and the bookstore platform. Also, I worked on some smaller projects of the software factory.',
+      description: "Focused on developing a Java-based Android app connecting teachers with a bookstore platform, using MVVM architecture, Room database, and Retrofit for HTTP requests. Also contributed to other development projects within the software factory.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
     },
     {
@@ -42,7 +58,7 @@ const resumeData = {
       company: 'Life Link',
       startDate: new Date(2017, 4, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2017, 11, 22), // Note: In JavaScript, months are 0-indexed
-      description: 'Worked on an Android application written in Java to communicate with hardware by Bluetooth 4.0. The application receives the information provided by the hardware and sends it to a remote server via an API.',
+      description: "Developed an Android application in Java to communicate with hardware via Bluetooth 4.0. Facilitated data transmission from the hardware to a remote server via an API, enhancing data management and accessibility.",
       skillsUsed: ['android', 'git', 'java', 'bluetooth 4.0'],
     },
     {
@@ -51,7 +67,7 @@ const resumeData = {
       startDate: new Date(2015, 0, 12), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
       description: 'I worked on ACDC app, which was a project used internally by the company employees to control their worked hours and vacation management. It was my first contact with Ruby on Rails and PostgresSQL. Also, I had contact with some frontend features like Angular and Ember, and Git for versioning. This project was challenging because so many people in many branches were using it, and there were so many issues to solve and implement.',
-      skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql'],
+      skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql', 'git', 'scrum'],
     },
     {
       jobTitle: 'Internship',
@@ -109,6 +125,10 @@ const resumeData = {
     {
       language: 'Portuguese',
       proficiency: 'First language',
+    },
+    {
+      language: 'Italian',
+      proficiency: 'Basic',
     },
   ],
 };
@@ -304,7 +324,7 @@ function generateExperienceContainer(){
   data = resumeData.experiences;
   finalHtml = '';
   for(let idx = 0; idx < data.length; idx++){
-    let endDateYear = data[idx].endDate == null ? (new Date()).getFullYear() : data[idx].endDate.getFullYear();
+    let endDateYear = data[idx].endDate == null ? "CURRENT" : data[idx].endDate.getFullYear();
     finalHtml += '<div class="card">';
     finalHtml += '<div class="row">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
