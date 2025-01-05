@@ -11,7 +11,7 @@ const resumeData = {
   github: 'joaogouveia89',
   jobTitle: 'Software Engineer',
   stackToDisplay: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kotlin', 'java', 'c++', 'ruby-on-rails'],
-  description: 'Software engineer with experience in native Android development using both Kotlin and Java, and with several common libraries for development for the platform. I have a habit of optimizing my work by automating repetitive daily tasks and using a personal checklist to manage my own to-do list.',
+  description: 'Software engineer with experience in native Android development using Kotlin and Java, along with a strong background in libraries and frameworks for the platform. I rely on a self-task list and a professional journal to track my activities, progress, and upcoming tasks. Jiu-jitsu is my favorite hobby, and I practice it three times a week, which has greatly contributed to my personal and professional growth.',
   experiences: [
     {
       jobTitle: 'Android engineer',
