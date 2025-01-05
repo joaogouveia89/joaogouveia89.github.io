@@ -127,12 +127,12 @@ function openLinkedin(){
 
 function getAge(){
   const today = new Date();
-  const birthDate = resumeData["birthDate"];;
+  const birthDate = resumeData["birthDate"];
   
-  const age = today.getFullYear() - birthDate.getFullYear();
+  var age = today.getFullYear() - birthDate.getFullYear();
   
   // Check if the birthday hasn't occurred yet this year
-  if (today < new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())) {
+  if (today.getMonth() <   birthDate.getMonth()) {
     age--;
   }
   
