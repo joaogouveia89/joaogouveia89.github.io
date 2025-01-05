@@ -5254,11 +5254,14 @@ Created using IcoMoon - icomoon.io
       width: 100%;
       margin: 0;
       padding: 0;
+      overflow: hidden;
   }
   
   .bjj-container {
       background: url('../images/bjj.jpeg') no-repeat center center;
       background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       width: 100%;
       height: 120vh; /* Adjust the height to your needs */
       display: flex;
