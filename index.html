@@ -19,6 +19,10 @@
          gtag('js', new Date());
          
          gtag('config', 'G-QTQN9KY6XT');
+
+         function section_click(section){
+            gtag('event', 'section_click_' + section, {});
+         }
     </script>
     <noscript>
         <style type="text/css">
@@ -40,11 +44,11 @@
                     </div>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
-                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#bjj">Jiu Jitsu</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#about" onclick="section_click('about')">About</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill" onclick="section_click('skill')">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience" onclick="section_click('experience')">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#education" onclick="section_click('education')">Education</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#bjj" onclick="section_click('jiu_jitsu')">Jiu Jitsu</a></li>
                         </ul>
                     </div>
                 </div>
