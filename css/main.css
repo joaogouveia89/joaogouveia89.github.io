@@ -5249,6 +5249,55 @@ Created using IcoMoon - icomoon.io
   .cc-reference ol {
     margin-bottom: 0; } }
 
+    .cc-bjj {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .bjj-container {
+      background: url('../images/bjj.jpeg') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 120vh; /* Adjust the height to your needs */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      opacity: 0.9; /* Slightly dimmed */
+  }
+  
+  .bjj-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adds the darker overlay */
+      z-index: 1;
+  }
+  
+  .bjj-text {
+    position: absolute;
+    bottom: 10%; /* Adjust to control vertical positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Ensures text appears above the overlay */
+    color: white;
+    text-align: center;
+}
+  
+  .bjj-text h1 {
+      font-size: 3rem; /* Adjust as needed */
+      margin-bottom: 1rem;
+  }
+  
+  .bjj-text p {
+      font-size: 1.5rem; /* Adjust as needed */
+  }
+
 /* Contact Information Style */
 .cc-contact-information {
   width: 100%;
