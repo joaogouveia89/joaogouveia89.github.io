@@ -10,15 +10,16 @@ const resumeData = {
   linkedin: "https://www.linkedin.com/in/jo%C3%A3o-lucas-veloso-gouveia-1319a38a/",
   github: 'joaogouveia89',
   jobTitle: 'Software Engineer',
+  stackToDisplay: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kotlin', 'java', 'c++', 'ruby-on-rails'],
   description: 'Software engineer with experience in native Android development using both Kotlin and Java, and with several common libraries for development for the platform. I have a habit of optimizing my work by automating repetitive daily tasks and using a personal checklist to manage my own to-do list.',
   experiences: [
     {
       jobTitle: 'Mobile engineer',
       company: 'Bosch PT',
-      startDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
+      startDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexkmmed
       endDate: null,
       description: 'I worked on a project called Refine My Site, which was a mobile app for Android and iOS to manage construction projects. Some functionalities implemented were camera image uploading, offline behavior, and push notifications. The mobile team was based in Portugal and Germany, but there were other teams in other countries as well.',
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack compose', 'kmm', 'flow', 'kotlin'],
+      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
     },
     {
       jobTitle: 'Mobile Engineer',
@@ -26,7 +27,7 @@ const resumeData = {
       startDate: new Date(2019, 4, 6), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
       description: 'I worked on an Android application written in Kotlin to handle audio entertainment operations. In this project, we consumed external services like Spotify API, Apple CarPlay, and also worked with internal storage media data (USB) and tuner external interface. This project is just a part of the platform for the future generation of BMW media kit computers, so I worked alongside multiple teams in Portugal, Germany, and China.',
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android auto', 'room db', 'live data', 'kotlin'],
+      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin', 'c++'],
     },
     {
       jobTitle: 'Android developer',
@@ -50,7 +51,7 @@ const resumeData = {
       startDate: new Date(2015, 0, 12), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
       description: 'I worked on ACDC app, which was a project used internally by the company employees to control their worked hours and vacation management. It was my first contact with Ruby on Rails and PostgresSQL. Also, I had contact with some frontend features like Angular and Ember, and Git for versioning. This project was challenging because so many people in many branches were using it, and there were so many issues to solve and implement.',
-      skillsUsed: ['ruby on rails', 'ruby', 'postgresql'],
+      skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql'],
     },
     {
       jobTitle: 'Internship',
@@ -139,7 +140,7 @@ function emailToClipboard(){
    navigator.clipboard.writeText(resumeData["email"]);
 }
 
-function fetchSkillsSummary(){
+function fetchSkillsSummary() {
   const skillExperienceMap = {};
 
   // Iterate through each experience entry
@@ -156,15 +157,18 @@ function fetchSkillsSummary(){
 
     // Iterate through the skills used in this experience
     skillsUsed.forEach((skill) => {
-      if (!skillExperienceMap[skill]) {
-        skillExperienceMap[skill] = 0;
+      if (resumeData.stackToDisplay.includes(skill)) { // Only include skills in stackToDisplay
+        if (!skillExperienceMap[skill]) {
+          skillExperienceMap[skill] = 0;
+        }
+        skillExperienceMap[skill] += totalMonths;
       }
-      skillExperienceMap[skill] += totalMonths;
     });
   });
 
   return skillExperienceMap;
 }
+
 
 function formatMonthsAsDuration(months) {
   if (months === 0) {
