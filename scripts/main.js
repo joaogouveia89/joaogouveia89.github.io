@@ -7,7 +7,6 @@ const resumeData = {
   birthDate: new Date(1989, 1, 10), // Note: In JavaScript, months are 0-indexed
   baseTown: 'Lisboa - Portugal',
   email: 'j.lucas.gouveia@gmail.com',
-  facebook: "https://www.facebook.com/joaolucas.gouveia.9/",
   linkedin: "https://www.linkedin.com/in/jo%C3%A3o-lucas-veloso-gouveia-1319a38a/",
   github: 'joaogouveia89',
   jobTitle: 'Software Engineer',
@@ -112,10 +111,6 @@ const resumeData = {
     },
   ],
 };
-
-function openFacebook(){
-  window.open(resumeData["facebook"], '_blank');
-}
 
 function openGithub(){
   window.open("https://github.com/" + resumeData["github"], '_blank');
