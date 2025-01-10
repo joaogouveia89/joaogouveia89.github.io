@@ -356,6 +356,8 @@ function generateExperienceContainer(){
 
 
 $(document).ready(function() {
+
+
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
     // once: true  
@@ -371,6 +373,21 @@ $(document).ready(function() {
     setTimeout(function () {
         $popover.popover('hide');
     }, 800);
+  });
+
+  $('#visitor-profile-modal').modal('toggle');
+
+  $("#dialog-send").click(function(){
+    const stack = $("input[name='stack']:checked").val();
+
+    if(stack != undefined){
+      gtag('event', 'recruiter_dialog_response', {
+        event_category: 'User Interaction',
+        event_label: `Stack: ${stack}`,
+      });
+    }
+
+    $('#visitor-profile-modal').modal('toggle');
   });
 
   experienceMonths = experienceTimeInMonths();
