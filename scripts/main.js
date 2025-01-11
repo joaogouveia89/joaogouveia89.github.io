@@ -382,12 +382,20 @@ $(document).ready(function() {
 
     if(stack != undefined){
       gtag('event', 'recruiter_dialog_response', {
-        event_category: 'User Interaction',
-        event_label: `Stack: ${stack}`,
+        event_category: 'Stack Info',
+        event_label: `${stack}`,
       });
     }
 
     $('#visitor-profile-modal').modal('toggle');
+  });
+
+  $("#dialog-dwa").click(function(){
+    gtag('event', 'recruiter_dialog_response', {
+      event_category: 'Stack Info',
+      event_label: `Dont want to answer`,
+    });
+    $('#visitor-profile-modal').modal('hide');
   });
 
   experienceMonths = experienceTimeInMonths();

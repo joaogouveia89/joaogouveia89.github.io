@@ -40,19 +40,30 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Hello visitor</h5>
+                  <h5 class="modal-title">Hello, visitor!</h5>
                 </div>
                 <div class="modal-body">
-                    <div>
-                        <h6>Which stack are you looking for?</h6>
-                        <input type="radio" name="stack" value="android" required> Android
-                        <input type="radio" name="stack" value="ror" required style="margin-left: 24px;"> Ruby on Rails
-                        <input type="radio" name="stack" value="cpp" required style="margin-left: 24px;"> C++
-                    </div>
+                  <p>To personalize your experience, we would like to know:</p>
+                  <h6>Which stack are you looking for?</h6>
+                  <!-- Stack Options -->
+                  <div class="stack-options">
+                    <label for="android">
+                      <input type="radio" name="stack" value="android" id="android" required> Android
+                    </label>
+                    <label for="ror">
+                      <input type="radio" name="stack" value="ror" id="ror" required> Ruby on Rails
+                    </label>
+                    <label for="cpp">
+                      <input type="radio" name="stack" value="cpp" id="cpp" required> C++
+                    </label>
+                  </div>
+                  <p class="privacy-info" style="font-size: 12px; color: #6c757d; margin-top: 15px;">
+                    Your responses will only be used for personal analytics purposes and will not be shared with third parties.
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" id="dialog-send">Send</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">I Don't want to answer</button>
+                  <button type="button" class="btn btn-secondary" id="dialog-dwa">I don't want to answer</button>
                 </div>
               </div>
             </div>

@@ -5336,3 +5336,48 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+
+
+  .modal-header {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .stack-options {
+    margin-top: 15px;
+  }
+
+  .stack-options label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  #dialog-send, #dialog-dwa {
+    width: 45%;
+  }
+  
+  /* Opcional: melhorar a visualização no mobile */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      width: 90%;
+    }
+    
+    #dialog-send, #dialog-dwa {
+      width: 48%;
+    }
+  }
