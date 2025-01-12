@@ -11,6 +11,9 @@
     <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
     <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
     <link href="css/main.css?ver=1.1.0" rel="stylesheet">
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTQN9KY6XT"></script>
     <script>
@@ -50,7 +53,7 @@
                     <label for="android">
                       <input type="radio" name="stack" value="android" id="android" required> Android
                     </label>
-                    <label for="ror">
+                    <label for="ror" >
                       <input type="radio" name="stack" value="ror" id="ror" required> Ruby on Rails
                     </label>
                     <label for="cpp">
@@ -79,6 +82,7 @@
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#about" onclick="section_click('about')">About</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill" onclick="section_click('skill')">Skills</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience" onclick="section_click('experience')">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link smooth-scroll" href="#showcase" onclick="section_click('showcase')">Showcase</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#education" onclick="section_click('education')">Education</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#bjj" onclick="section_click('jiu_jitsu')">Jiu Jitsu</a></li>
                         </ul>
@@ -282,6 +286,127 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="section" id="showcase">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 ml-auto mr-auto">
+                            <div class="h4 text-center mb-4 title">Showcase</div>
+                            <div class="nav-align-center">
+                                <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#port-android" role="tablist">
+                                            <i class="devicon-android-plain" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#port-cpp" role="tablist">
+                                            <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="tab-content gallery mt-5">
+                        <!-- Android Portfolio Tab -->
+                        <div class="tab-pane active" id="port-android">
+                            <h1 class="text-center">Android</h1>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="portfolio-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                        <h3 class="text-center">
+                                            Random User App
+                                        </h3> 
+                                        <div class="text-center">
+                                            <a href="#/" class="btn btn-link" onclick="openRandomUserRepo();">
+                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
+                                            </a>
+                                        </div>
+   
+                                       <div class="d-flex justify-content-center">
+                                            <ul>
+                                                <li>Displays random user data.</li>
+                                                <li>Icons are color-coded based on the user's nationality flag.</li>
+                                                <li>Enables phone dialing directly from the app.</li>
+                                                <li>Shows user location on maps.</li>
+                                                <li>Allows email address copying with a single click.</li>
+                                            </ul>
+                                       </div>
+                                        
+                                        
+                                        <div class="d-flex justify-content-center">
+                                            <img class="text-center" src="images/random-user.gif" alt="Random User App" class="img-fluid mb-3" style="width: 100%; max-width: 300px;">
+                                        </div>
+                                    </div>
+                                </div>
+                               <!-- <div class="col-md-6">
+                                    <div class="portfolio-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                        <h3 class="text-center">
+                                            Random User App
+                                        </h3> 
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-link" onclick="openRandomUserRepo();">
+                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
+                                            </a>
+                                        </div>
+   
+                                       <div class="d-flex justify-content-center">
+                                            <ul>
+                                                <li>Displays random user data.</li>
+                                                <li>Icons are color-coded based on the user's nationality flag.</li>
+                                                <li>Enables phone dialing directly from the app.</li>
+                                                <li>Shows user location on maps.</li>
+                                                <li>Allows email address copying with a single click.</li>
+                                            </ul>
+                                       </div>
+                                        
+                                        
+                                        <div class="d-flex justify-content-center">
+                                            <img class="text-center" src="images/random-user.gif" alt="Random User App" class="img-fluid mb-3" style="width: 100%; max-width: 300px;">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+            
+                        <!-- C++ Portfolio Tab -->
+                        <div class="tab-pane" id="port-cpp" role="tabpanel">
+                            <h1 class="text-center">C++</h1>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="portfolio-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                        <h3 class="text-center">
+                                            Traffic Simulation
+                                        </h3> 
+                                        <div class="text-center">
+                                            <a href="#/" class="btn btn-link" onclick="openTrafficSimulationRepo();">
+                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
+                                            </a>
+                                        </div>
+   
+                                       <div class="d-flex justify-content-center">
+                                            <ul>
+                                                <li>Intesection control with concurrent threads</li>
+                                                <li>One access at a time</li>
+                                                <li>Simulation of traffic semaphore</li>
+                                            </ul>
+                                       </div>
+                                        
+                                        
+                                        <div class="d-flex justify-content-center">
+                                            <img class="text-center" src="images/traffic-simulation.gif" alt="Traffic Simulation App" class="img-fluid mb-3" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+              
             <div class="section" id="education">
                 <div class="container cc-education">
                     <div class="h4 text-center mb-4 title">Education</div>

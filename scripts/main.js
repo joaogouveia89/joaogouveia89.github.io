@@ -134,11 +134,34 @@ const resumeData = {
 };
 
 function openGithub(){
+  gtag('event', 'recruiter_open_link', {
+    event_category: 'Github',
+    event_label: 'Profile',
+  });
   window.open("https://github.com/" + resumeData["github"], '_blank');
 }
 
 function openLinkedin(){
+  gtag('event', 'recruiter_open_link', {
+    event_category: 'Linkedin'
+  });
   window.open(resumeData["linkedin"], '_blank');
+}
+
+function openRandomUserRepo(){
+  gtag('event', 'recruiter_open_link', {
+    event_category: 'Github',
+    event_label: 'Random User',
+  });
+  window.open("https://github.com/joaogouveia89/Random-User", '_blank');
+}
+
+function openTrafficSimulationRepo(){
+  gtag('event', 'recruiter_open_link', {
+    event_category: 'Github',
+    event_label: 'Traffic Simulation',
+  });
+  window.open("https://github.com/joaogouveia89/traffic-simulation", '_blank');
 }
 
 function getAge(){
@@ -353,6 +376,8 @@ function generateExperienceContainer(){
   }
   return finalHtml;
 }
+
+
 
 
 $(document).ready(function() {
