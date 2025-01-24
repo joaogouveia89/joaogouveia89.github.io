@@ -400,7 +400,12 @@ $(document).ready(function() {
     }, 800);
   });
 
-  $('#visitor-profile-modal').modal('toggle');
+  let isShowModel = localStorage.getItem("hasAnswered");
+
+  if(isShowModel != 'true'){
+    $('#visitor-profile-modal').modal('toggle');
+  }
+
 
   $("#dialog-send").click(function(){
     const stack = $("input[name='stack']:checked").val();
@@ -411,7 +416,7 @@ $(document).ready(function() {
         event_label: `${stack}`,
       });
     }
-
+    localStorage.setItem("hasAnswered", true);
     $('#visitor-profile-modal').modal('toggle');
   });
 
@@ -420,6 +425,7 @@ $(document).ready(function() {
       event_category: 'Stack Info',
       event_label: `Dont want to answer`,
     });
+    localStorage.setItem("hasAnswered", true);
     $('#visitor-profile-modal').modal('hide');
   });
 
