@@ -20,7 +20,10 @@ const resumeData = {
       endDate: null,
       description: 'Working on the MB Way project, focusing on maintaining and modernizing the platform by suggesting improvements to the tech stack, conducting code reviews to ensure quality, and actively participating in task planning to align development efforts with business goals.',
       skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
-      logo: "sibs.png"
+      logo: "sibs.png",
+      website: "www.sibs.com",
+      city: "Lisboa",
+      country: "pt"
     },
     {
       jobTitle: 'Android engineer',
@@ -29,7 +32,10 @@ const resumeData = {
       endDate: new Date(2024, 9, 15),
       description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability.',
       skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
-      logo: "boost.jpg"
+      logo: "boost.jpg",
+      website: "https://www.symphonyai.com/retail-cpg/store-intelligence/",
+      city: "Lisboa",
+      country: "pt"
     },
     {
       jobTitle: 'Mobile engineer',
@@ -38,7 +44,10 @@ const resumeData = {
       endDate: new Date(2024, 1, 2),
       description: 'Key contributor to "Refine My Site," a mobile app for managing construction projects on Android and iOS. Developed features like image uploads, offline functionality, and push notifications, collaborating with international teams for successful project delivery.',
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
-      logo: "bosch.png"
+      logo: "bosch.png",
+      website: "https://www.bosch-pt.com/ptlegalpages/us/ptna/en/refinemysiteweb/servicedescription/",
+      city: "Lisboa",
+      country: "pt"
     },
     {
       jobTitle: 'Mobile Engineer',
@@ -47,7 +56,10 @@ const resumeData = {
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
       description: "Key team member in developing a Kotlin-based media player app for BMW's in-car entertainment system, supporting audio features through integrations with Spotify API, Apple CarPlay, USB storage, and tuner interfaces. Contributed feature improvements and collaborated with teams in Portugal, Germany, and China for successful project outcomes.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin', 'c++'],
-      logo: "ctw.svg"
+      logo: "ctw.svg",
+      website: "https://www.criticaltechworks.com/",
+      city: "Lisboa",
+      country: "pt"
     },
     {
       jobTitle: 'Android developer',
@@ -56,7 +68,10 @@ const resumeData = {
       endDate: new Date(2019, 0, 4), // Note: In JavaScript, months are 0-indexed
       description: "Focused on developing a Java-based Android app connecting teachers with a bookstore platform, using MVVM architecture, Room database, and Retrofit for HTTP requests. Also contributed to other development projects within the software factory.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
-      logo: "ioasys.jpg"
+      logo: "ioasys.jpg",
+      website: "https://ioasys.com.br/",
+      city: "Belo Horizonte",
+      country: "br"
     },
     {
       jobTitle: 'Android developer',
@@ -65,7 +80,10 @@ const resumeData = {
       endDate: new Date(2017, 11, 22), // Note: In JavaScript, months are 0-indexed
       description: "Developed an Android application in Java to communicate with hardware via Bluetooth 4.0. Facilitated data transmission from the hardware to a remote server via an API, enhancing data management and accessibility.",
       skillsUsed: ['android', 'git', 'java', 'bluetooth 4.0'],
-      logo: "lifelink.webp"
+      logo: "lifelink.webp",
+      website: "https://www.lifelink.com.br/",
+      city: "Belo Horizonte",
+      country: "br"
     },
     {
       jobTitle: 'Internship',
@@ -74,7 +92,10 @@ const resumeData = {
       endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
       description: 'I worked on ACDC app, which was a project used internally by the company employees to control their worked hours and vacation management. It was my first contact with Ruby on Rails and PostgresSQL. Also, I had contact with some frontend features like Angular and Ember, and Git for versioning. This project was challenging because so many people in many branches were using it, and there were so many issues to solve and implement.',
       skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql', 'git', 'scrum'],
-      logo: "avenuecode.svg"
+      logo: "avenuecode.svg",
+      website: "https://www.avenuecode.com/",
+      city: "Belo Horizonte",
+      country: "br"
     },
     {
       jobTitle: 'Internship',
@@ -83,7 +104,9 @@ const resumeData = {
       endDate: new Date(2015, 0, 9), // Note: In JavaScript, months are 0-indexed
       description: 'GDAX is a telemarketing company, and the application I worked on was for sales recording by the team who call the clients. For this application, it used a framework created internally written in PHP and using a MySQL database. It was my very first contact with code versioning using SVN and some frontend tasks.',
       skillsUsed: ['php', 'mysql'],
-      logo: "gdax.jpeg"
+      logo: "gdax.jpeg",
+      city: "Belo Horizonte",
+      country: "br"
     },
     {
       jobTitle: 'Vacation internship',
@@ -92,7 +115,10 @@ const resumeData = {
       endDate: new Date(2014, 6, 2), // Note: In JavaScript, months are 0-indexed
       description: 'Very first contact professionally with programming. I spent a month working on an application for file sharing between the employees of the engineering projects of the company, taking into consideration privileges and access permissions.',
       skillsUsed: ['php', 'mysql'],
-      logo: "tca.png"
+      logo: "tca.png",
+      website: "https://www.timeconsult.com.br/",
+      city: "Recife",
+      country: "br"
     },
     {
       jobTitle: 'Digital introduction instructor',
@@ -101,6 +127,8 @@ const resumeData = {
       endDate: new Date(2017, 6, 31), // Note: In JavaScript, months are 0-indexed
       description: "Private classes on digital introduction to elderly people. In these classes, I addressed topics like email and social networks usage (Instagram, Facebook, Gmail) and some useful usage habits like transferring pictures from the smartphone to the PC, pairing the smartphone to other devices in the client's home, and so on.",
       skillsUsed: [],
+      city: "Belo Horizonte",
+      country: "br"
     },
   ],
   education: [
@@ -381,7 +409,8 @@ function generateExperienceContainer(){
 
     finalHtml += '<div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">';
     finalHtml += '<div class="card-body">';
-    finalHtml += '<div class="h5">' + data[idx].jobTitle + '</div>';
+    finalHtml += '<div class="d-flex flex-row"><span class="h5">' + data[idx].jobTitle + ' - ' + data[idx].city + '</span>';
+    finalHtml += '<img class="my-auto" style="padding-left:12px;" src="https://flagcdn.com/w40/' + data[idx].country + '.png" width="40" alt="' + data[idx].country + ' Flag" style="margin-top:10px;"></div>'
     finalHtml += '<p class="category">' + data[idx].skillsUsed.join(", ") + '</p>';
     finalHtml += '<p>' + data[idx].description + '</p>';
     // closing card-body
