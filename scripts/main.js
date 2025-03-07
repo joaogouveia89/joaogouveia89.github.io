@@ -413,6 +413,9 @@ function generateExperienceContainer(){
     finalHtml += '<img class="my-auto" style="padding-left:12px;" src="https://flagcdn.com/w40/' + data[idx].country + '.png" width="40" alt="' + data[idx].country + ' Flag" style="margin-top:10px;"></div>'
     finalHtml += '<p class="category">' + data[idx].skillsUsed.join(", ") + '</p>';
     finalHtml += '<p>' + data[idx].description + '</p>';
+    if(data[idx].website  !== undefined){
+      finalHtml += '<p><strong>Website:</strong> <a href="' + data[idx].website + '" target="_blank">' + data[idx].website + '</a></p>'
+    }
     // closing card-body
     finalHtml += '</div>';
     // closing col-md-9" data-aos="fade-left
