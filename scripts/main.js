@@ -310,9 +310,9 @@ function generateEducationContainer(){
   finalHtml = '';
   for(let idx = 0; idx < data.length; idx++){
     finalHtml += '<div class="card">';
-    finalHtml += '<div class="row">';
+    finalHtml += '<div class="row align-items-center">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
-    finalHtml += '<div class="card-body cc-education-header">';
+    finalHtml += '<div class="card-body cc-education-header text-center">';
     finalHtml += '<div><img src="./images/universities/' + data[idx].logo + '"</img></div>'
     finalHtml += '<p style="padding-top:24px; font-size:20px">' + data[idx].startDate.getFullYear() + ' - ' + data[idx].endDate.getFullYear() + '</p>';
 
@@ -321,8 +321,8 @@ function generateEducationContainer(){
     //closing col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500"
     finalHtml += '</div>';
 
-    finalHtml += '<div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">';
-    finalHtml += '<div class="card-body">';
+    finalHtml += '<div class="col-md-9 d-flex flex-column justify-content-center align-items-center aos-init aos-animate" data-aos-offset="50" data-aos-duration="500">';
+    finalHtml += '<div class="card-body  text-center"  style="min-height:0px;">';
     finalHtml += '<div class="h5">' + data[idx].title + '</div>';
     finalHtml += '<p class="category">' + data[idx].category + '</p>';
     
