@@ -101,6 +101,7 @@ const resumeData = {
       category: 'online course',
       startDate: new Date(2021, 4, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2021, 8, 1), // Note: In JavaScript, months are 0-indexed
+      logo: "udacity.png"
     },
     {
       university: 'FUMEC',
@@ -108,6 +109,7 @@ const resumeData = {
       category: 'university',
       startDate: new Date(2014, 7, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2018, 11, 10), // Note: In JavaScript, months are 0-indexed
+      logo: "fumec.png"
     },
     {
       university: 'PUCMINAS',
@@ -115,6 +117,7 @@ const resumeData = {
       category: 'university',
       startDate: new Date(2009, 7, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2014, 6, 1), // Note: In JavaScript, months are 0-indexed
+      logo: "pucmg.png"
     },
   ],
   languages: [
@@ -310,8 +313,8 @@ function generateEducationContainer(){
     finalHtml += '<div class="row">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
     finalHtml += '<div class="card-body cc-education-header">';
-    finalHtml += '<p>' + data[idx].startDate.getFullYear() + ' - ' + data[idx].endDate.getFullYear() + '</p>';
-    finalHtml += '<div class="h5">' + data[idx].university + '</div>'
+    finalHtml += '<div><img src="./images/universities/' + data[idx].logo + '"</img></div>'
+    finalHtml += '<p style="padding-top:24px; font-size:20px">' + data[idx].startDate.getFullYear() + ' - ' + data[idx].endDate.getFullYear() + '</p>';
 
     // closing card-body cc-education-header
     finalHtml += '</div>';
@@ -322,6 +325,7 @@ function generateEducationContainer(){
     finalHtml += '<div class="card-body">';
     finalHtml += '<div class="h5">' + data[idx].title + '</div>';
     finalHtml += '<p class="category">' + data[idx].category + '</p>';
+    
     // closing card-body
     finalHtml += '</div>';
     // closing col-md-9" data-aos="fade-left
