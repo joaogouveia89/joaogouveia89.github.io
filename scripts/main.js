@@ -19,7 +19,8 @@ const resumeData = {
       startDate: new Date(2024, 10, 25), // Note: In JavaScript, months are 0-indexkmmed
       endDate: null,
       description: 'Working on the MB Way project, focusing on maintaining and modernizing the platform by suggesting improvements to the tech stack, conducting code reviews to ensure quality, and actively participating in task planning to align development efforts with business goals.',
-      skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin']
+      skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
+      logo: "sibs.png"
     },
     {
       jobTitle: 'Android engineer',
@@ -27,7 +28,8 @@ const resumeData = {
       startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
       endDate: new Date(2024, 9, 15),
       description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability.',
-      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin']
+      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
+      logo: "boost.jpg"
     },
     {
       jobTitle: 'Mobile engineer',
@@ -36,6 +38,7 @@ const resumeData = {
       endDate: new Date(2024, 1, 2),
       description: 'Key contributor to "Refine My Site," a mobile app for managing construction projects on Android and iOS. Developed features like image uploads, offline functionality, and push notifications, collaborating with international teams for successful project delivery.',
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
+      logo: "bosch.png"
     },
     {
       jobTitle: 'Mobile Engineer',
@@ -44,6 +47,7 @@ const resumeData = {
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
       description: "Key team member in developing a Kotlin-based media player app for BMW's in-car entertainment system, supporting audio features through integrations with Spotify API, Apple CarPlay, USB storage, and tuner interfaces. Contributed feature improvements and collaborated with teams in Portugal, Germany, and China for successful project outcomes.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin', 'c++'],
+      logo: "ctw.svg"
     },
     {
       jobTitle: 'Android developer',
@@ -52,6 +56,7 @@ const resumeData = {
       endDate: new Date(2019, 0, 4), // Note: In JavaScript, months are 0-indexed
       description: "Focused on developing a Java-based Android app connecting teachers with a bookstore platform, using MVVM architecture, Room database, and Retrofit for HTTP requests. Also contributed to other development projects within the software factory.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
+      logo: "ioasys.jpg"
     },
     {
       jobTitle: 'Android developer',
@@ -60,6 +65,7 @@ const resumeData = {
       endDate: new Date(2017, 11, 22), // Note: In JavaScript, months are 0-indexed
       description: "Developed an Android application in Java to communicate with hardware via Bluetooth 4.0. Facilitated data transmission from the hardware to a remote server via an API, enhancing data management and accessibility.",
       skillsUsed: ['android', 'git', 'java', 'bluetooth 4.0'],
+      logo: "lifelink.webp"
     },
     {
       jobTitle: 'Internship',
@@ -68,6 +74,7 @@ const resumeData = {
       endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
       description: 'I worked on ACDC app, which was a project used internally by the company employees to control their worked hours and vacation management. It was my first contact with Ruby on Rails and PostgresSQL. Also, I had contact with some frontend features like Angular and Ember, and Git for versioning. This project was challenging because so many people in many branches were using it, and there were so many issues to solve and implement.',
       skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql', 'git', 'scrum'],
+      logo: "avenuecode.svg"
     },
     {
       jobTitle: 'Internship',
@@ -76,6 +83,7 @@ const resumeData = {
       endDate: new Date(2015, 0, 9), // Note: In JavaScript, months are 0-indexed
       description: 'GDAX is a telemarketing company, and the application I worked on was for sales recording by the team who call the clients. For this application, it used a framework created internally written in PHP and using a MySQL database. It was my very first contact with code versioning using SVN and some frontend tasks.',
       skillsUsed: ['php', 'mysql'],
+      logo: "gdax.jpeg"
     },
     {
       jobTitle: 'Vacation internship',
@@ -84,6 +92,7 @@ const resumeData = {
       endDate: new Date(2014, 6, 2), // Note: In JavaScript, months are 0-indexed
       description: 'Very first contact professionally with programming. I spent a month working on an application for file sharing between the employees of the engineering projects of the company, taking into consideration privileges and access permissions.',
       skillsUsed: ['php', 'mysql'],
+      logo: "tca.png"
     },
     {
       jobTitle: 'Digital introduction instructor',
@@ -356,8 +365,14 @@ function generateExperienceContainer(){
     finalHtml += '<div class="row">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
     finalHtml += '<div class="card-body cc-education-header">';
-    finalHtml += '<p>' + data[idx].startDate.getFullYear() + ' - ' + endDateYear + '</p>';
-    finalHtml += '<div class="h5">' + data[idx].company + '</div>'
+    if(data[idx].logo === undefined){
+      finalHtml += '<div class="h5">' + data[idx].company + '</div>';
+    }else{
+      finalHtml += '<div><img width=200" src="./images/companies/' + data[idx].logo + '"</img></div>'
+    }
+    
+    finalHtml += '<p style="padding-top:24px; font-size:20px">' + data[idx].startDate.getFullYear() + ' - ' + endDateYear + '</p>';
+
 
     // closing card-body cc-education-header
     finalHtml += '</div>';
