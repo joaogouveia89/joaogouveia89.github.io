@@ -21,7 +21,7 @@ const resumeData = {
       description: 'Working on the MB Way project, focusing on maintaining and modernizing the platform by suggesting improvements to the tech stack, conducting code reviews to ensure quality, and actively participating in task planning to align development efforts with business goals.',
       skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
       logo: "sibs.png",
-      website: "www.sibs.com",
+      website: "https://www.sibs.com",
       city: "Lisboa",
       country: "pt"
     },
@@ -414,7 +414,8 @@ function generateExperienceContainer(){
     finalHtml += '<p class="category">' + data[idx].skillsUsed.join(", ") + '</p>';
     finalHtml += '<p>' + data[idx].description + '</p>';
     if(data[idx].website  !== undefined){
-      finalHtml += '<p><strong>Website:</strong> <a href="' + data[idx].website + '" target="_blank">' + data[idx].website + '</a></p>'
+      const websiteShort = new URL(data[idx].website).origin;
+      finalHtml += '<p><strong>Website:</strong> <a href="' + data[idx].website + '" target="_blank">' + websiteShort + '</a></p>'
     }
     // closing card-body
     finalHtml += '</div>';
