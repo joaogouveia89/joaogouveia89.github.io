@@ -10,7 +10,7 @@ const resumeData = {
   linkedin: "https://www.linkedin.com/in/jo%C3%A3o-lucas-veloso-gouveia-1319a38a/",
   github: 'joaogouveia89',
   jobTitle: 'Software Engineer',
-  stackToDisplay: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kotlin', 'java', 'c++', 'ruby-on-rails'],
+  stackToDisplay: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kotlin', 'java', 'ruby-on-rails'],
   description: 'Software engineer with experience in native Android development using Kotlin and Java, along with a strong background in libraries and frameworks for the platform. I rely on a self-task list and a professional journal to track my activities, progress, and upcoming tasks. Jiu-jitsu is my favorite hobby, and I practice it three times a week, which has greatly contributed to my personal and professional growth.',
   experiences: [
     {
@@ -22,6 +22,7 @@ const resumeData = {
       skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
       logo: "sibs.png",
       website: "https://www.sibs.com",
+      references: ["mbway.webp"],
       city: "Lisboa",
       country: "pt"
     },
@@ -30,7 +31,7 @@ const resumeData = {
       company: 'Boost IT',
       startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
       endDate: new Date(2024, 9, 15),
-      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability.',
+      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability. <b>The project was eventually discontinued due to strategic business decisions.</b>',
       skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
       logo: "boost.jpg",
       website: "https://www.symphonyai.com/retail-cpg/store-intelligence/",
@@ -55,9 +56,10 @@ const resumeData = {
       startDate: new Date(2019, 4, 6), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
       description: "Key team member in developing a Kotlin-based media player app for BMW's in-car entertainment system, supporting audio features through integrations with Spotify API, Apple CarPlay, USB storage, and tuner interfaces. Contributed feature improvements and collaborated with teams in Portugal, Germany, and China for successful project outcomes.",
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin', 'c++'],
+      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin'],
       logo: "ctw.svg",
       website: "https://www.criticaltechworks.com/",
+      references: ["bmw.png"],
       city: "Lisboa",
       country: "pt"
     },
@@ -70,6 +72,7 @@ const resumeData = {
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
       logo: "ioasys.jpg",
       website: "https://ioasys.com.br/",
+      references: ["saraiva.png"],
       city: "Belo Horizonte",
       country: "br"
     },
@@ -416,6 +419,17 @@ function generateExperienceContainer(){
     if(data[idx].website  !== undefined){
       const websiteShort = new URL(data[idx].website).origin;
       finalHtml += '<p><strong>Website:</strong> <a href="' + data[idx].website + '" target="_blank">' + websiteShort + '</a></p>'
+    }
+
+    const references = data[idx].references
+    if(references !== undefined){
+      references.forEach((element) => {
+        finalHtml += '<div class="d-flex flex-row gap-3 mt-3">'
+        finalHtml += '<img src="./images/companies/references/' + element + '" width="180">'
+      })
+      
+      // closing d-flex flex-row gap-3 mt-3
+      finalHtml += '</div>';
     }
     // closing card-body
     finalHtml += '</div>';
