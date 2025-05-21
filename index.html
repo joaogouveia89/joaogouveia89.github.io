@@ -91,7 +91,7 @@
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience"
                                     onclick="section_click('experience')">Experience</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#showcase"
-                                    onclick="section_click('showcase')">Showcase</a></li>
+                                    onclick="section_click('showcase')">Projects</a></li>
                             <li class="nav-item"><a class="nav-link smooth-scroll" href="#education"
                                     onclick="section_click('education')">Education</a></li>
                         </ul>
@@ -446,131 +446,129 @@
             </div>
 
             <div class="section" id="showcase">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 ml-auto mr-auto">
-                            <div class="h4 text-center mb-4 title">Showcase</div>
-                            <div class="nav-align-center">
-                                <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#port-android"
-                                            role="tablist">
-                                            <i class="devicon-android-plain" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#port-cpp" role="tablist">
-                                            <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                <div class="h4 text-center mb-4 title">Projects</div>
+                <div class="container cc-projects">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-projects-header">
+                                    <div class="h5">Random User</div>
+                                    <br/>
+                                    <span>
+                                        <i style="font-size: 64px;" class="devicon-android-plain-wordmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <p>
+                                        Random User Android App is a modern Android application built with Kotlin and Jetpack Compose that consumes the Random User API to display user profiles in an intuitive and interactive way. It features Google Maps integration, offline support, contact management, and a clean architecture with robust error handling. Designed with scalability and maintainability in mind, it leverages Hilt for dependency injection and includes unit testing.
+                                    </p>
+                                    <a href="https://github.com/joaogouveia89/Random-User" target="_blank" class="btn btn-link">
+                                        <i class="fa fa-github fa-2x"></i> GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="tab-content gallery mt-5">
-                        <!-- Android Portfolio Tab -->
-                        <div class="tab-pane active" id="port-android">
-                            <h1 class="text-center">Android</h1>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="portfolio-item" data-aos="fade-up"
-                                        data-aos-anchor-placement="top-bottom">
-                                        <h3 class="text-center">
-                                            Random User App
-                                        </h3>
-                                        <div class="text-center">
-                                            <a href="#/" class="btn btn-link" onclick="openRandomUserRepo();">
-                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
-                                            </a>
-                                        </div>
-
-                                        <div class="d-flex justify-content-center">
-                                            <ul>
-                                                <li>Displays random user data.</li>
-                                                <li>Icons are color-coded based on the user's nationality flag.</li>
-                                                <li>Enables phone dialing directly from the app.</li>
-                                                <li>Shows user location on maps.</li>
-                                                <li>Allows email address copying with a single click.</li>
-                                                <li>User saving as contact(on app database).</li>
-                                                <li>List of saved users</li>
-                                                <li>Delete saved user</li>
-                                                <li>Search for an user</li>
-                                            </ul>
-                                        </div>
-
-
-                                        <div class="d-flex justify-content-center">
-                                            <div class="row">
-                                                <img class="text-center" src="images/random-user.gif" alt="Random User App"
-                                                class="img-fluid mb-3" style="width: 100%; max-width: 300px;">
-                                                <img class="text-center" src="images/random-user2.gif" alt="Random User App"
-                                                class="img-fluid mb-3" style="width: 100%; max-width: 300px;">
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-projects-header">
+                                    <div class="h5">Number classificator app(MNIST Dataset)</div>
+                                    <br/>
+                                    <span>
+                                        <i style="font-size: 64px;" class="devicon-android-plain-wordmark"></i>
+                                        <i style="font-size: 64px;" class="devicon-tensorflow-original"></i>
+                                        <i style="font-size: 64px;" class="devicon-jupyter-plain-wordmark"></i>
+                                    </span>
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <div class="portfolio-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                        <h3 class="text-center">
-                                            Random User App
-                                        </h3> 
-                                        <div class="text-center">
-                                            <a href="#" class="btn btn-link" onclick="openRandomUserRepo();">
-                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
-                                            </a>
-                                        </div>
-   
-                                       <div class="d-flex justify-content-center">
-                                            <ul>
-                                                <li>Displays random user data.</li>
-                                                <li>Icons are color-coded based on the user's nationality flag.</li>
-                                                <li>Enables phone dialing directly from the app.</li>
-                                                <li>Shows user location on maps.</li>
-                                                <li>Allows email address copying with a single click.</li>
-                                            </ul>
-                                       </div>
-                                        
-                                        
-                                        <div class="d-flex justify-content-center">
-                                            <img class="text-center" src="images/random-user.gif" alt="Random User App" class="img-fluid mb-3" style="width: 100%; max-width: 300px;">
-                                        </div>
-                                    </div>
-                                </div> -->
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <p>
+                                        Number Classifier App (MNIST Dataset) is an educational Android application that showcases on-device machine learning by recognizing handwritten digits using a custom-trained deep learning model. The model was trained by the developer during a machine learning bootcamp, and the repository includes the full training notebook used in the course. Built with Kotlin and TensorFlow Lite, the app allows users to draw digits and get real-time predictions, highlighting the power of edge AI on Android devices.                                    </p>
+                                    <a href="https://github.com/joaogouveia89/MNist-Model-JLVG" target="_blank" class="btn btn-link">
+                                        <i class="fa fa-github fa-2x"></i> GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- C++ Portfolio Tab -->
-                        <div class="tab-pane" id="port-cpp" role="tabpanel">
-                            <h1 class="text-center">C++</h1>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="portfolio-item" data-aos="fade-up"
-                                        data-aos-anchor-placement="top-bottom">
-                                        <h3 class="text-center">
-                                            Traffic Simulation
-                                        </h3>
-                                        <div class="text-center">
-                                            <a href="#/" class="btn btn-link" onclick="openTrafficSimulationRepo();">
-                                                <i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub
-                                            </a>
-                                        </div>
-
-                                        <div class="d-flex justify-content-center">
-                                            <ul>
-                                                <li>Intesection control with concurrent threads</li>
-                                                <li>One access at a time</li>
-                                                <li>Simulation of traffic semaphore</li>
-                                            </ul>
-                                        </div>
-
-
-                                        <div class="d-flex justify-content-center">
-                                            <img class="text-center" src="images/traffic-simulation.gif"
-                                                alt="Traffic Simulation App" class="img-fluid mb-3"
-                                                style="width: 100%;">
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-projects-header">
+                                    <div class="h5">Project Euler</div>
+                                    <br/>
+                                    <span>
+                                        <i style="font-size: 64px;" class="devicon-kotlin-plain"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <p>
+                                    Project Euler Solutions is a personal repository containing solutions to various mathematical and programming challenges from Project Euler. Each problem is solved using clean, efficient code with a focus on readability and mathematical insight.
+                                    The repository also includes Ruby script that automatically generate a Markdown file tracking the execution time of each solution at every commit, helping monitor performance improvements over time.
+                                    </p>
+                                    <a href="https://github.com/joaogouveia89/project-euler" target="_blank" class="btn btn-link">
+                                        <i class="fa fa-github fa-2x"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-projects-header">
+                                    <div class="h5">Sorting Comparasion App</div>
+                                    <br/>
+                                    <span>
+                                        <i style="font-size: 64px;" class="devicon-android-plain-wordmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <p>
+                                    Sorting Comparison App is a simple yet effective Android application that benchmarks two classic sorting algorithms — Bubble Sort and Quick Sort — on a list of 3,000 randomly generated items. The app measures and displays the execution time of each algorithm directly in the UI, providing a clear visual comparison.
+                                    Built with Kotlin, Jetpack Compose, and Coroutines, the app features a modern, responsive interface and reactive programming principles. This project was designed as an educational experiment to explore algorithm efficiency and UI responsiveness in real-world Android environments.
+                                    </p>
+                                    <a href="https://github.com/joaogouveia89/Sorting-Comparasion-app" target="_blank" class="btn btn-link">
+                                        <i class="fa fa-github fa-2x"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                data-aos-duration="500">
+                                <div class="card-body cc-projects-header">
+                                    <div class="h5">Traffic Simulation</div>
+                                    <br/>
+                                    <span>
+                                        <i style="font-size: 64px;" class="devicon-cplusplus-plain"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                                <div class="card-body">
+                                    <p>
+                                        A C++ simulation project developed during the Udacity C++ Nanodegree (Concurrency module), where vehicles navigate a city with intersections controlled by traffic lights.
+                                        This project focuses on implementing a thread-safe communication system between traffic lights and vehicles using modern C++ concurrency features like mutexes, locks, and message queues. The simulation includes dynamic traffic light behavior with randomized phase changes, ensuring safe and realistic vehicle flow.
+                                        The repository includes the complete implementation along with build instructions and project tasks as defined in the course.
+                                     </p>
+                                    <a href="https://github.com/joaogouveia89/traffic-simulation" target="_blank" class="btn btn-link">
+                                        <i class="fa fa-github fa-2x"></i> GitHub
+                                    </a>
                                 </div>
                             </div>
                         </div>

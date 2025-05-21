@@ -5221,6 +5221,16 @@ Created using IcoMoon - icomoon.io
   text-align: center;
   color: #fff; }
 
+  /* Projects Style */
+.cc-projects .h5 {
+  margin-bottom: 0; }
+
+.cc-projects .cc-projects-header {
+  padding-top: 60px;
+  padding-right: 0;
+  text-align: center;
+  color: #fff; }
+
 /* References Style */
 .cc-reference .card {
   padding: 40px; }
