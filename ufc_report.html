@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+   <link rel="stylesheet" type='text/css'
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+   <link rel="stylesheet" type="text/css" href="ufc_report.css" />
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <title>UFC Analytics</title>
+</head>
+
+
+<body>
+   <!-- Mobile Toggle Button -->
+   <button class="mobile-toggle d-md-none" type="button" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+   </button>
+   <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+         <h4 class="menu-title"><img src="./images/UFC_Logo.png" alt="UFC Logo" class="title-image"></i>Analytics</h4>
+      </div>
+      <nav class="sidebar-nav">
+         <ul class="nav flex-column">
+            <li class="nav-item">
+               <a class="nav-link active" href="#" data-section="overview">
+                  <i class="fas fa-home"></i>
+                  Overview
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#" data-section="history">
+                  <i class="fas fa-history"></i>
+                  Historical Overview
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#" data-section="statistics">
+                  <i class="fas fa-chart-pie"></i>
+                  Fight Statistics
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#" data-section="fighters-statistics">
+                  <i class="fas fa-trophy"></i>
+                  Fighters Statistics
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#" data-section="influences">
+                  <i class="fas fa-chart-line"></i>
+                  Fight Influences
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#" data-section="rivalries">
+                  <i class="fas fa-users"></i>
+                  Rivalries
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </div>
+   <!-- Main Content -->
+   <div class="main-content">
+      <!-- Overview Section -->
+<div class="section active" id="overview">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-4 fw-bold text-dark mb-3">UFC Analysis Dashboard</h1>
+            <p class="lead text-muted">Comprehensive analysis of UFC fight data, exploring statistics, trends, and
+                insights from 1994 to 2025.</p>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">714</div>
+                <div class="stat-label">Total Events</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">2539</div>
+                <div class="stat-label">Total Fighters</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">2014</div>
+                <div class="stat-label">Year with Most Events</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">166</div>
+                <div class="stat-label">Cities</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">8013</div>
+                <div class="stat-label">Total Fights</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">46.87%</div>
+                <div class="stat-label">Fights End in Decision</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">11.22</div>
+                <div class="stat-label">Avg Fights per Event</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="stat-number">29</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Dataset Information</h5>
+                </div>
+                <div class="card-body">
+                    <p>This dashboard provides a comprehensive exploration of UFC fight data from 1994 to 2025.
+                        It brings together key statistics, performance metrics, and historical insights to help
+                        identify patterns across fighters, events, and outcomes. By analyzing trends such as fight
+                        frequency, methods of victory, and head-to-head rivalries, the goal is to create a clearer
+                        picture of how the sport has evolved over time and highlight factors that influence success
+                        inside the octagon.</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <a href="https://www.kaggle.com/datasets/neelagiriaditya/ufc-datasets-1994-2025/data"
+                            target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-database me-1"></i>Dataset
+                        </a>
+                        <a href="https://github.com/joaogouveia89/ufc-data-study-case" target="_blank"
+                            class="btn btn-outline-dark btn-sm">
+                            <i class="fab fa-github me-1"></i>Codebase
+                        </a>
+                    </div>
+
+                    <!-- New Sources Section -->
+                    <h6 class="fw-bold mt-3 mb-2 text-dark"><i class="fas fa-link me-2"></i>Sources</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li>
+                            <a href="https://www.espn.com/mma/" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-user-circle me-1 text-secondary"></i> Fighter photos (ESPN MMA)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.flaticon.com/packs/mma-fighters" target="_blank"
+                                class="text-decoration-none">
+                                <i class="fas fa-icons me-1 text-secondary"></i> Fight icons (Flaticon MMA pack)
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="text-muted mt-3 mb-0"><strong>Processed on:</strong> September 3rd, 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+      <!-- Historical Overview Section -->
+<div class="section" id="history">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2><i class="fas fa-history text-primary me-2"></i>Historical Overview</h2>
+        </div>
+    </div>
+
+    <!-- Evolution Chart -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i>Evolution of Fights Per Year</h5>
+        </div>
+        <div class="card-body text-center">
+            <canvas id="fightsPerYearChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Host Countries -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Most Frequent Host Countries</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Country</th>
+                            <th>Events Hosted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>USA</td>
+                            <td>5515</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Brazil</td>
+                            <td>471</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>Canada</td>
+                            <td>413</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>United Kingdom</td>
+                            <td>338</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>United Arab Emirates</td>
+                            <td>252</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Cities -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-city me-2"></i>Top 5 Host Cities</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                
+                <div class="col-md-2 text-center">
+                    <img src="images/city1.jpg" alt="Las Vegas" class="img-fluid rounded shadow-sm mb-2">
+                    <h6>Las Vegas</h6>
+                    <span class="badge bg-primary rounded-pill fs-6 px-2 py-1">2521 events</span>
+                </div>
+                
+                <div class="col-md-2 text-center">
+                    <img src="images/city2.jpg" alt="Abu Dhabi" class="img-fluid rounded shadow-sm mb-2">
+                    <h6>Abu Dhabi</h6>
+                    <span class="badge bg-primary rounded-pill fs-6 px-2 py-1">252 events</span>
+                </div>
+                
+                <div class="col-md-2 text-center">
+                    <img src="images/city3.jpg" alt="London" class="img-fluid rounded shadow-sm mb-2">
+                    <h6>London</h6>
+                    <span class="badge bg-primary rounded-pill fs-6 px-2 py-1">183 events</span>
+                </div>
+                
+                <div class="col-md-2 text-center">
+                    <img src="images/city4.jpg" alt="Rio de Janeiro" class="img-fluid rounded shadow-sm mb-2">
+                    <h6>Rio de Janeiro</h6>
+                    <span class="badge bg-primary rounded-pill fs-6 px-2 py-1">147 events</span>
+                </div>
+                
+                <div class="col-md-2 text-center">
+                    <img src="images/city5.jpg" alt="Newark" class="img-fluid rounded shadow-sm mb-2">
+                    <h6>Newark</h6>
+                    <span class="badge bg-primary rounded-pill fs-6 px-2 py-1">127 events</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Weight Class Distribution -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-dumbbell me-2"></i>Weight Class Distribution Over Time</h5>
+        </div>
+        <div class="card-body">
+            <div class="chart-container">
+                <canvas id="distFightsPerWeightChart"></canvas>
+            </div>
+            <p class="text-muted small text-center mt-3">Weight class distribution over time</p>
+        </div>
+    </div>
+</div>
+      <!-- Fight Statistics Section -->
+<div class="section" id="statistics">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2><i class="fas fa-chart-pie text-primary me-2"></i>Fight Statistics</h2>
+        </div>
+    </div>
+
+    <!-- Win Ratio Chart -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-trophy me-2"></i>Win Ratio by Method</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <canvas id="winRatioChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+    <div class="list-group">
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-hand-rock text-success me-2"></i>KO/TKO</span>
+            <span class="badge bg-success rounded-pill">
+                32.25%
+            </span>
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-link text-info me-2"></i>Submission</span>
+            <span class="badge bg-info rounded-pill">
+                19.65%
+            </span>
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-clipboard-check text-primary me-2"></i>Decision</span>
+            <span class="badge bg-primary rounded-pill">
+                48.1%
+            </span>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance by Age -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-user-clock me-2"></i>Performance by Age</h5>
+        </div>
+        <div class="card-body text-center">
+            <div class="chart-container">
+                <canvas id="performanceByAgeChart"></canvas>
+            </div>
+            <div class="note">
+                At age 45, the win ratio deviates from the overall pattern, which may have occurred due to specific
+                factors such as sample size, career shifts, or external circumstances.
+            </div>
+        </div>
+    </div>
+
+    <!-- Average Fight Statistics -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-hourglass-half me-2"></i>Average Fight Statistics</h5>
+        </div>
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">3 mins 49 secs</div>
+                        <div class="stat-label">Avg Fight Duration</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">110.31</div>
+                        <div class="stat-label">Avg Strikes Landed per Fight</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">2.11</div>
+                        <div class="stat-label">Avg Takedowns per Fight</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      <!-- Top Fighters Section -->
+<div class="section" id="fighters-statistics">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2><i class="fas fa-trophy text-primary me-2"></i>Top Fighters</h2>
+        </div>
+    </div>
+
+    <!-- Most Wins -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-medal me-2"></i>Top 5 UFC Fighters by Wins</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_winners_fighter_1.jpg" alt="Jim Miller"
+                                class="fighter-wins-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Jim Miller</h6>
+                            <small class="text-muted fst-italic"></small>
+
+                            <!-- Stats -->
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">27 UFC Wins</span>
+                                <div class="mt-1">
+                                    <span class="badge bg-success me-1">38 Wins</span>
+                                    <span class="badge bg-danger me-1">19 Losses</span>
+                                    <span class="badge bg-secondary">0 Draws</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="badge bg-info">Last UFC Fight: 2025-04-12</span>
+                                </div>
+                            </div>
+
+                            <!-- Extra Info -->
+                            <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                                <li><i class="fas fa-ruler-vertical me-1 text-primary"></i>Height: 172.72
+                                    cm</li>
+                                <li><i class="fas fa-arrows-alt-h me-1 text-info"></i>Reach: 180.34 cm</li>
+                                <li><i class="fas fa-birthday-cake me-1 text-pink"></i>Birthday: 1983-08-30
+                                </li>
+                            </ul>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_winners_fighter_2.jpg" alt="Neil Magny"
+                                class="fighter-wins-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Neil Magny</h6>
+                            <small class="text-muted fst-italic"></small>
+
+                            <!-- Stats -->
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">23 UFC Wins</span>
+                                <div class="mt-1">
+                                    <span class="badge bg-success me-1">30 Wins</span>
+                                    <span class="badge bg-danger me-1">14 Losses</span>
+                                    <span class="badge bg-secondary">0 Draws</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="badge bg-info">Last UFC Fight: 2025-08-02</span>
+                                </div>
+                            </div>
+
+                            <!-- Extra Info -->
+                            <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                                <li><i class="fas fa-ruler-vertical me-1 text-primary"></i>Height: 190.5
+                                    cm</li>
+                                <li><i class="fas fa-arrows-alt-h me-1 text-info"></i>Reach: 203.2 cm</li>
+                                <li><i class="fas fa-birthday-cake me-1 text-pink"></i>Birthday: 1987-08-03
+                                </li>
+                            </ul>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_winners_fighter_3.jpg" alt="Andrei Arlovski"
+                                class="fighter-wins-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Andrei Arlovski</h6>
+                            <small class="text-muted fst-italic"></small>
+
+                            <!-- Stats -->
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">23 UFC Wins</span>
+                                <div class="mt-1">
+                                    <span class="badge bg-success me-1">34 Wins</span>
+                                    <span class="badge bg-danger me-1">24 Losses</span>
+                                    <span class="badge bg-secondary">0 Draws</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="badge bg-info">Last UFC Fight: 2024-06-29</span>
+                                </div>
+                            </div>
+
+                            <!-- Extra Info -->
+                            <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                                <li><i class="fas fa-ruler-vertical me-1 text-primary"></i>Height: 190.5
+                                    cm</li>
+                                <li><i class="fas fa-arrows-alt-h me-1 text-info"></i>Reach: 195.58 cm</li>
+                                <li><i class="fas fa-birthday-cake me-1 text-pink"></i>Birthday: 1979-02-04
+                                </li>
+                            </ul>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_winners_fighter_4.jpg" alt="Donald Cerrone"
+                                class="fighter-wins-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Donald Cerrone</h6>
+                            <small class="text-muted fst-italic"></small>
+
+                            <!-- Stats -->
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">23 UFC Wins</span>
+                                <div class="mt-1">
+                                    <span class="badge bg-success me-1">36 Wins</span>
+                                    <span class="badge bg-danger me-1">17 Losses</span>
+                                    <span class="badge bg-secondary">0 Draws</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="badge bg-info">Last UFC Fight: 2022-07-02</span>
+                                </div>
+                            </div>
+
+                            <!-- Extra Info -->
+                            <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                                <li><i class="fas fa-ruler-vertical me-1 text-primary"></i>Height: 185.42
+                                    cm</li>
+                                <li><i class="fas fa-arrows-alt-h me-1 text-info"></i>Reach: 185.42 cm</li>
+                                <li><i class="fas fa-birthday-cake me-1 text-pink"></i>Birthday: 1983-03-29
+                                </li>
+                            </ul>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_winners_fighter_5.jpg" alt="Jon Jones"
+                                class="fighter-wins-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Jon Jones</h6>
+                            <small class="text-muted fst-italic"></small>
+
+                            <!-- Stats -->
+                            <div class="mt-3">
+                                <span class="badge bg-success me-1">22 UFC Wins</span>
+                                <div class="mt-1">
+                                    <span class="badge bg-success me-1">28 Wins</span>
+                                    <span class="badge bg-danger me-1">1 Losses</span>
+                                    <span class="badge bg-secondary">0 Draws</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="badge bg-info">Last UFC Fight: 2024-11-16</span>
+                                </div>
+                            </div>
+
+                            <!-- Extra Info -->
+                            <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                                <li><i class="fas fa-ruler-vertical me-1 text-primary"></i>Height: 193.04
+                                    cm</li>
+                                <li><i class="fas fa-arrows-alt-h me-1 text-info"></i>Reach: 213.36 cm</li>
+                                <li><i class="fas fa-birthday-cake me-1 text-pink"></i>Birthday: 1987-07-19
+                                </li>
+                            </ul>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="text-muted small mt-3">
+                Ranking of fighters with the highest number of UFC wins, compared with their overall career records,
+                physical attributes, and last fight date in the UFC.
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Highest KO Rate -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-fist-raised me-2"></i>Top 5 UFC Fighters by KO Rate</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_ko_rate_fighter_1.jpg" alt="Cain Velasquez"
+                                class="fighter-ko-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Cain Velasquez</h6>
+
+                            <!-- Stats -->
+                            <p class="text-muted small mb-2">
+                                10 KO Wins / 12 Total Wins
+                            </p>
+
+                            <!-- KO Rate Progress -->
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" role="progressbar"
+                                    style="width: 83.3%;"
+                                    aria-valuenow="83.3"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    83.3%
+                                </div>
+                            </div>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_ko_rate_fighter_2.jpg" alt="Anthony Johnson"
+                                class="fighter-ko-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Anthony Johnson</h6>
+
+                            <!-- Stats -->
+                            <p class="text-muted small mb-2">
+                                10 KO Wins / 12 Total Wins
+                            </p>
+
+                            <!-- KO Rate Progress -->
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" role="progressbar"
+                                    style="width: 83.3%;"
+                                    aria-valuenow="83.3"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    83.3%
+                                </div>
+                            </div>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_ko_rate_fighter_3.jpg" alt="Francis Ngannou"
+                                class="fighter-ko-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Francis Ngannou</h6>
+
+                            <!-- Stats -->
+                            <p class="text-muted small mb-2">
+                                10 KO Wins / 12 Total Wins
+                            </p>
+
+                            <!-- KO Rate Progress -->
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" role="progressbar"
+                                    style="width: 83.3%;"
+                                    aria-valuenow="83.3"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    83.3%
+                                </div>
+                            </div>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_ko_rate_fighter_4.jpg" alt="Vitor Belfort"
+                                class="fighter-ko-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Vitor Belfort</h6>
+
+                            <!-- Stats -->
+                            <p class="text-muted small mb-2">
+                                12 KO Wins / 15 Total Wins
+                            </p>
+
+                            <!-- KO Rate Progress -->
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" role="progressbar"
+                                    style="width: 80.0%;"
+                                    aria-valuenow="80.0"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    80.0%
+                                </div>
+                            </div>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_ko_rate_fighter_5.jpg" alt="Derrick Lewis"
+                                class="fighter-ko-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Derrick Lewis</h6>
+
+                            <!-- Stats -->
+                            <p class="text-muted small mb-2">
+                                15 KO Wins / 19 Total Wins
+                            </p>
+
+                            <!-- KO Rate Progress -->
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" role="progressbar"
+                                    style="width: 78.9%;"
+                                    aria-valuenow="78.9"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                    78.9%
+                                </div>
+                            </div>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="text-muted small mt-3">
+                Shows the percentage of knockout victories relative to the fighter's total UFC wins. Only fighters with
+                more than 10 wins are included.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Top Submission Specialists -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-link me-2"></i>Top 5 Submission Specialists</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_submission_specialist_1.jpg" alt="Charles Oliveira"
+                                class="fighter-sub-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Charles Oliveira</h6>
+
+                            <!-- Submission Wins / Total Wins -->
+                            <p class="text-muted small mb-2">
+                                15 Submissions / 21 Total Wins
+                            </p>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_submission_specialist_2.jpg" alt="Jim Miller"
+                                class="fighter-sub-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Jim Miller</h6>
+
+                            <!-- Submission Wins / Total Wins -->
+                            <p class="text-muted small mb-2">
+                                13 Submissions / 27 Total Wins
+                            </p>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_submission_specialist_3.jpg" alt="Demian Maia"
+                                class="fighter-sub-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Demian Maia</h6>
+
+                            <!-- Submission Wins / Total Wins -->
+                            <p class="text-muted small mb-2">
+                                11 Submissions / 21 Total Wins
+                            </p>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_submission_specialist_4.jpg" alt="Gerald Meerschaert"
+                                class="fighter-sub-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Gerald Meerschaert</h6>
+
+                            <!-- Submission Wins / Total Wins -->
+                            <p class="text-muted small mb-2">
+                                10 Submissions / 10 Total Wins
+                            </p>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 text-center">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Fighter Image -->
+                            <img src="images/top_5_submission_specialist_5.jpg" alt="Nate Diaz"
+                                class="fighter-sub-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                                style="width:100px; height:100px; object-fit:cover;">
+
+                            <!-- Fighter Name -->
+                            <h6 class="fw-bold">Nate Diaz</h6>
+
+                            <!-- Submission Wins / Total Wins -->
+                            <p class="text-muted small mb-2">
+                                9 Submissions / 14 Total Wins
+                            </p>
+
+                            <!-- Ranking Highlight -->
+                            <div class="mt-auto">
+                                <span class="badge bg-dark">Rank #5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="text-muted small mt-3">
+                Fighters with the most wins by submission (locks, chokes, etc.).
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Fastest Average Fight Enders -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0"><i class="fas fa-bolt me-2"></i>Top 5 Fastest Average Fight Enders</h5>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <!-- Fighter Image -->
+                        <img src="images/top_5_fast_avg_fight_ender_1.jpg" alt="Francis Ngannou"
+                             class="fighter-fast-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                             style="width:100px; height:100px; object-fit:cover;">
+
+                        <!-- Fighter Name -->
+                        <h6 class="fw-bold">Francis Ngannou</h6>
+
+                        <!-- Avg Fight Duration & Total Fights -->
+                        <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                            <li><i class="fas fa-stopwatch me-1 text-primary"></i>Avg Duration: 116.0 sec</li>
+                            <li><i class="fas fa-fist-raised me-1 text-info"></i>Total Fights: 12</li>
+                        </ul>
+
+                        <!-- Highlight Badge & Ranking -->
+                        <div class="mt-auto">
+                            <span class="badge bg-dark">Rank #1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <!-- Fighter Image -->
+                        <img src="images/top_5_fast_avg_fight_ender_2.jpg" alt="Anthony Johnson"
+                             class="fighter-fast-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                             style="width:100px; height:100px; object-fit:cover;">
+
+                        <!-- Fighter Name -->
+                        <h6 class="fw-bold">Anthony Johnson</h6>
+
+                        <!-- Avg Fight Duration & Total Fights -->
+                        <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                            <li><i class="fas fa-stopwatch me-1 text-primary"></i>Avg Duration: 121.6 sec</li>
+                            <li><i class="fas fa-fist-raised me-1 text-info"></i>Total Fights: 12</li>
+                        </ul>
+
+                        <!-- Highlight Badge & Ranking -->
+                        <div class="mt-auto">
+                            <span class="badge bg-dark">Rank #2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <!-- Fighter Image -->
+                        <img src="images/top_5_fast_avg_fight_ender_3.jpg" alt="Vitor Belfort"
+                             class="fighter-fast-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                             style="width:100px; height:100px; object-fit:cover;">
+
+                        <!-- Fighter Name -->
+                        <h6 class="fw-bold">Vitor Belfort</h6>
+
+                        <!-- Avg Fight Duration & Total Fights -->
+                        <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                            <li><i class="fas fa-stopwatch me-1 text-primary"></i>Avg Duration: 126.7 sec</li>
+                            <li><i class="fas fa-fist-raised me-1 text-info"></i>Total Fights: 15</li>
+                        </ul>
+
+                        <!-- Highlight Badge & Ranking -->
+                        <div class="mt-auto">
+                            <span class="badge bg-dark">Rank #3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <!-- Fighter Image -->
+                        <img src="images/top_5_fast_avg_fight_ender_4.jpg" alt="Gabriel Gonzaga"
+                             class="fighter-fast-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                             style="width:100px; height:100px; object-fit:cover;">
+
+                        <!-- Fighter Name -->
+                        <h6 class="fw-bold">Gabriel Gonzaga</h6>
+
+                        <!-- Avg Fight Duration & Total Fights -->
+                        <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                            <li><i class="fas fa-stopwatch me-1 text-primary"></i>Avg Duration: 135.8 sec</li>
+                            <li><i class="fas fa-fist-raised me-1 text-info"></i>Total Fights: 11</li>
+                        </ul>
+
+                        <!-- Highlight Badge & Ranking -->
+                        <div class="mt-auto">
+                            <span class="badge bg-dark">Rank #4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center d-flex flex-column">
+                        <!-- Fighter Image -->
+                        <img src="images/top_5_fast_avg_fight_ender_5.jpg" alt="Frank Mir"
+                             class="fighter-fast-image mb-3 rounded-circle border border-2 border-dark mx-auto"
+                             style="width:100px; height:100px; object-fit:cover;">
+
+                        <!-- Fighter Name -->
+                        <h6 class="fw-bold">Frank Mir</h6>
+
+                        <!-- Avg Fight Duration & Total Fights -->
+                        <ul class="list-unstyled mt-3 text-start small flex-grow-1">
+                            <li><i class="fas fa-stopwatch me-1 text-primary"></i>Avg Duration: 139.3 sec</li>
+                            <li><i class="fas fa-fist-raised me-1 text-info"></i>Total Fights: 16</li>
+                        </ul>
+
+                        <!-- Highlight Badge & Ranking -->
+                        <div class="mt-auto">
+                            <span class="badge bg-dark">Rank #5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <p class="text-muted small mt-3">List of fighters who, on average, finish their fights the quickest (among fighters with more than 10 fights).</p>
+    </div>
+</div>
+
+</div>
+      <!-- Fight Influences Section -->
+<div class="section" id="influences">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2><i class="fas fa-chart-line text-primary me-2"></i>What Influences Fight Outcomes?</h2>
+        </div>
+    </div>
+
+    <!-- Physical Attributes -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-ruler me-2"></i>Physical Attributes Impact</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info">
+                <i class="fas fa-lightbulb me-2"></i>
+                <strong>Insight:</strong> Based on the data, reach difference shows a correlation of 0.053 with winning probability, while height difference shows a correlation of 0.041. This suggests that reach has a slightly higher influence on fight outcomes than height, although both correlations are weak and should not be considered strong predictors.
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance metrics impact -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Performance Metrics Impact</h5>
+    </div>
+    <div class="card-body">
+        <div class="row text-center">
+
+            <!-- Strikes -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/strike.png" alt="Strikes"
+                         class="card-img-top p-3 mx-auto d-block"
+                         style="max-width:200px; height:auto;">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Significant Strikes</h6>
+                        <p class="mb-1 text-muted small">Win rate when landing more</p>
+                        <span class="badge bg-success fs-6">
+                            76.51 %
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Takedowns -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/takedown.png" alt="Takedowns"
+                         class="card-img-top p-3 mx-auto d-block"
+                         style="max-width:200px; height:auto;">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Takedowns</h6>
+                        <p class="mb-1 text-muted small">Win rate when landing more</p>
+                        <span class="badge bg-primary fs-6">
+                            44.27 %
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submissions -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/submission.png" alt="Submissions"
+                         class="card-img-top p-3 mx-auto d-block"
+                         style="max-width:200px; height:auto;">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Submission Attempts</h6>
+                        <p class="mb-1 text-muted small">Win rate when attempting more</p>
+                        <span class="badge bg-warning text-dark fs-6">
+                            27.05 %
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-muted small mt-3 text-center">
+            Fighters who outperform their opponents in these core metrics — striking, grappling, and submissions —
+            demonstrate a clear statistical edge in winning probability.
+        </p>
+    </div>
+</div>
+
+
+    <!-- Previous Fight Outcome -->
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0"><i class="fas fa-running me-2"></i>Previous Fight Momentum</h5>
+        </div>
+        <div class="card-body">
+            <div class="row text-center">
+
+                <!-- Won Previous Fight -->
+                <div class="col-md-6 mb-3">
+                    <div class="p-4 rounded shadow-sm bg-light border border-success">
+                        <h6 class="fw-bold text-success">
+                            <i class="fas fa-trophy me-2"></i> Won Previous Fight
+                        </h6>
+                        <div class="display-6 text-success">
+                            51.43%
+                        </div>
+                        <small class="text-muted">Higher chance of keeping momentum</small>
+                    </div>
+                </div>
+
+                <!-- Lost Previous Fight -->
+                <div class="col-md-6 mb-3">
+                    <div class="p-4 rounded shadow-sm bg-light border border-warning">
+                        <h6 class="fw-bold text-warning">
+                            <i class="fas fa-times-circle me-2"></i> Lost Previous Fight
+                        </h6>
+                        <div class="display-6 text-warning">
+                            47.10%
+                        </div>
+                        <small class="text-muted">Fighting uphill after a loss</small>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-muted small mt-3 text-center">
+                Momentum plays a role: fighters coming off a win are more likely to win again.
+            </p>
+        </div>
+    </div>
+
+</div>
+      <!-- Rivalries Section -->
+<div class="section" id="rivalries">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="text-dark">
+                <i class="fas fa-users text-dark me-2"></i>
+                Historic Rivalries
+            </h2>
+
+        </div>
+    </div>
+
+    
+    <div class="card mb-5 shadow-sm border-0" style="background-color:#000000; color:white;">
+        <!-- Rivalry Header: Fighters and Total Wins -->
+        <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="images/rivalry_1.jpg" alt="Randy Couture" class="rounded-circle me-3">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Randy Couture</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+    </div>
+    <div class="fs-4 fw-bold text-center text-white">VS</div>
+    <div class="d-flex align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Chuck Liddell</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">2</p>
+        </div>
+        <img src="images/rivalry_2.jpg" alt="Chuck Liddell" class="rounded-circle me-3">
+    </div>
+</div>
+
+
+        <!-- Fights Timeline -->
+        <div class="card-body">
+            <h6 class="fw-bold mb-3 text-white"><i class="fas fa-history me-2"></i>Fight Timeline</h6>
+            <div class="row g-3">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_1.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 43: Meltdown</h6>
+                            <p class="mb-1 text-white small">2003-06-06</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Randy Couture</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_2.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 52: Couture vs Liddell 2</h6>
+                            <p class="mb-1 text-white small">2005-04-16</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Chuck Liddell</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_3.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 57: Liddell vs Couture 3</h6>
+                            <p class="mb-1 text-white small">2006-02-04</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Chuck Liddell</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mb-5 shadow-sm border-0" style="background-color:#000000; color:white;">
+        <!-- Rivalry Header: Fighters and Total Wins -->
+        <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="images/rivalry_3.jpg" alt="Andrei Arlovski" class="rounded-circle me-3">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Andrei Arlovski</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+    </div>
+    <div class="fs-4 fw-bold text-center text-white">VS</div>
+    <div class="d-flex align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Tim Sylvia</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">2</p>
+        </div>
+        <img src="images/rivalry_4.jpg" alt="Tim Sylvia" class="rounded-circle me-3">
+    </div>
+</div>
+
+
+        <!-- Fights Timeline -->
+        <div class="card-body">
+            <h6 class="fw-bold mb-3 text-white"><i class="fas fa-history me-2"></i>Fight Timeline</h6>
+            <div class="row g-3">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_4.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 51: Super Saturday</h6>
+                            <p class="mb-1 text-white small">2005-02-05</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Andrei Arlovski</strong> (Submission)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_5.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 59: Reality Check</h6>
+                            <p class="mb-1 text-white small">2006-04-15</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Tim Sylvia</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_6.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 61: Bitter Rivals</h6>
+                            <p class="mb-1 text-white small">2006-07-08</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Tim Sylvia</strong> (Decision - Unanimous)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mb-5 shadow-sm border-0" style="background-color:#000000; color:white;">
+        <!-- Rivalry Header: Fighters and Total Wins -->
+        <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="images/rivalry_5.jpg" alt="BJ Penn" class="rounded-circle me-3">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">BJ Penn</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">2</p>
+        </div>
+    </div>
+    <div class="fs-4 fw-bold text-center text-white">VS</div>
+    <div class="d-flex align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Matt Hughes</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+        <img src="images/rivalry_6.jpg" alt="Matt Hughes" class="rounded-circle me-3">
+    </div>
+</div>
+
+
+        <!-- Fights Timeline -->
+        <div class="card-body">
+            <h6 class="fw-bold mb-3 text-white"><i class="fas fa-history me-2"></i>Fight Timeline</h6>
+            <div class="row g-3">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_7.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 46: Supernatural</h6>
+                            <p class="mb-1 text-white small">2004-01-31</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>BJ Penn</strong> (Submission)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_8.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 63: Hughes vs Penn</h6>
+                            <p class="mb-1 text-white small">2006-09-23</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Matt Hughes</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_9.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 123: Rampage vs Machida</h6>
+                            <p class="mb-1 text-white small">2010-11-20</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>BJ Penn</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mb-5 shadow-sm border-0" style="background-color:#000000; color:white;">
+        <!-- Rivalry Header: Fighters and Total Wins -->
+        <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="images/rivalry_7.jpg" alt="Deiveson Figueiredo" class="rounded-circle me-3">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Deiveson Figueiredo</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+    </div>
+    <div class="fs-4 fw-bold text-center text-white">VS</div>
+    <div class="d-flex align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Brandon Moreno</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">2</p>
+        </div>
+        <img src="images/rivalry_8.jpg" alt="Brandon Moreno" class="rounded-circle me-3">
+    </div>
+</div>
+
+
+        <!-- Fights Timeline -->
+        <div class="card-body">
+            <h6 class="fw-bold mb-3 text-white"><i class="fas fa-history me-2"></i>Fight Timeline</h6>
+            <div class="row g-3">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_10.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 256: Figueiredo vs. Moreno</h6>
+                            <p class="mb-1 text-white small">2020-12-12</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Draw / No Contest</strong> (Decision - Majority)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_11.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 263: Adesanya vs. Vettori 2</h6>
+                            <p class="mb-1 text-white small">2021-06-12</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Brandon Moreno</strong> (Submission)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_12.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 270: Ngannou vs. Gane</h6>
+                            <p class="mb-1 text-white small">2022-01-22</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Deiveson Figueiredo</strong> (Decision - Unanimous)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_13.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 283: Teixeira vs. Hill</h6>
+                            <p class="mb-1 text-white small">2023-01-21</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Brandon Moreno</strong> (TKO - Doctor's Stoppage)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mb-5 shadow-sm border-0" style="background-color:#000000; color:white;">
+        <!-- Rivalry Header: Fighters and Total Wins -->
+        <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <img src="images/rivalry_9.jpg" alt="Gray Maynard" class="rounded-circle me-3">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Gray Maynard</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+    </div>
+    <div class="fs-4 fw-bold text-center text-white">VS</div>
+    <div class="d-flex align-items-center">
+        <div class="d-flex flex-column align-items-center">
+            <h5 class="mb-0 text-white">Frankie Edgar</h5>
+            <p style="margin-top: 12px; font-size: 2.5rem;">1</p>
+        </div>
+        <img src="images/rivalry_10.jpg" alt="Frankie Edgar" class="rounded-circle me-3">
+    </div>
+</div>
+
+
+        <!-- Fights Timeline -->
+        <div class="card-body">
+            <h6 class="fw-bold mb-3 text-white"><i class="fas fa-history me-2"></i>Fight Timeline</h6>
+            <div class="row g-3">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_14.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC Fight Night: Florian vs Lauzon</h6>
+                            <p class="mb-1 text-white small">2008-04-02</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Gray Maynard</strong> (Decision - Unanimous)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_15.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 125: Resolution</h6>
+                            <p class="mb-1 text-white small">2011-01-01</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Draw / No Contest</strong> (Decision - Split)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm" style="background-color:#111111; color:white;">
+                        <img src="images/rivalry_poster_fight_16.jpg" class="card-img-top mx-auto d-block" alt="Fight Poster" style="width: 50%;">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold mb-1 text-white">UFC 136: Edgar vs Maynard 3</h6>
+                            <p class="mb-1 text-white small">2011-10-08</p>
+                            <p class="mb-1 text-white"><i class="fas fa-trophy text-warning me-1"></i>
+                                <strong>Frankie Edgar</strong> (KO/TKO)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+   </div>
+   <!-- Footer -->
+   <footer class="mt-5 py-4 bg-dark text-light">
+      <div class="container text-center small">
+         <p class="mb-1">
+            📊 UFC Data Analysis Report — Generated on <strong>September 3rd, 2025</strong>
+         </p>
+         <p class="mb-2">
+            Built with <i class="fab fa-python text-warning"></i> Python & <i class="fas fa-chart-bar text-info"></i>
+            Chart.js
+         </p>
+         <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/joaogouveia89/ufc-data-study-case" target="_blank" class="text-light">
+               <i class="devicon-github-original"></i> GitHub
+            </a>
+            <a href="https://www.kaggle.com/datasets/neelagiriaditya/ufc-datasets-1994-2025/data" target="_blank" class="text-light">
+               <i class="devicon-kaggle-original"></i> Kaggle Dataset
+            </a>
+         </div>
+         <hr class="border-secondary my-3">
+         <p class="mb-0 text">
+            ⚠️ This study is exploratory and intended for educational purposes.
+            UFC® is a registered trademark of Zuffa, LLC.
+         </p>
+      </div>
+   </footer>
+</body>
+<script>
+   // Navigation functionality
+   function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(section => {
+         section.classList.remove('active');
+      });
+
+      // Show selected section
+      document.getElementById(sectionId).classList.add('active');
+
+      // Update navigation
+      document.querySelectorAll('.nav-link').forEach(link => {
+         link.classList.remove('active');
+      });
+      document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+   }
+
+   // Add click listeners to navigation
+   document.querySelectorAll('[data-section]').forEach(link => {
+      link.addEventListener('click', (e) => {
+         e.preventDefault();
+         const sectionId = e.currentTarget.getAttribute('data-section');
+         showSection(sectionId);
+      });
+   });
+
+   // Mobile sidebar toggle
+   function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('show');
+   }
+
+   // Chart setup functions
+
+   function setupEventsPerYearChart() {
+      const ctx = document.getElementById('fightsPerYearChart').getContext('2d');
+      new Chart(ctx, {
+         type: 'line',
+         data: {
+            labels: [1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], // years
+   datasets: [{
+      label: 'Fights per Year',
+      data: [31, 40, 43, 41, 25, 44, 43, 40, 53, 41, 39, 64, 132, 153, 181, 195, 232, 279, 320, 364, 481, 452, 469, 435, 449, 516, 456, 509, 511, 520, 517, 338], // counts
+      borderColor: 'rgba(75, 192, 192, 1)',
+      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+      fill: true,
+      tension: 0.3
+               }]
+            },
+   options: {
+      responsive: true,
+         plugins: {
+         legend: { display: false },
+      },
+      scales: {
+         x: { title: { display: true, text: 'Year' } },
+         y: { title: { display: true, text: 'Number of Fights' } }
+      }
+   }
+         });
+      }
+
+   function setupPerformanceByAgeChart() {
+      // Recebendo os dados do Python (via Jinja, por exemplo)
+      const perfData = {"age": {"0": 18.0, "1": 19.0, "2": 20.0, "3": 21.0, "4": 22.0, "5": 23.0, "6": 24.0, "7": 25.0, "8": 26.0, "9": 27.0, "10": 28.0, "11": 29.0, "12": 30.0, "13": 31.0, "14": 32.0, "15": 33.0, "16": 34.0, "17": 35.0, "18": 36.0, "19": 37.0, "20": 38.0, "21": 39.0, "22": 40.0, "23": 41.0, "24": 42.0, "25": 43.0, "26": 44.0, "27": 45.0, "28": 46.0, "29": 47.0, "30": 51.0}, "win_rate": {"0": 0.4, "1": 0.8, "2": 0.6, "3": 0.580952380952381, "4": 0.5644444444444444, "5": 0.597051597051597, "6": 0.5456110154905336, "7": 0.5231866825208086, "8": 0.5342080599812559, "9": 0.5537383177570093, "10": 0.5285306704707561, "11": 0.5064758009543285, "12": 0.5056628914057295, "13": 0.48705388383484954, "14": 0.47653142402545745, "15": 0.4673076923076923, "16": 0.42905405405405406, "17": 0.4192592592592593, "18": 0.4134078212290503, "19": 0.4273743016759777, "20": 0.3662551440329218, "21": 0.3618421052631579, "22": 0.3557692307692308, "23": 0.39622641509433965, "24": 0.2926829268292683, "25": 0.3333333333333333, "26": 0.26666666666666666, "27": 0.14285714285714285, "28": 0.5, "29": 0.5, "30": 0.0}};
+
+   // Extraindo arrays de idades e win_rate
+   const ages = Object.values(perfData.age);
+   const winRates = Object.values(perfData.win_rate);
+
+   const ctx = document.getElementById('performanceByAgeChart').getContext('2d');
+   new Chart(ctx, {
+      type: 'line',
+      data: {
+         labels: ages,
+         datasets: [{
+            label: 'Win Rate',
+            data: winRates,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            tension: 0.3,
+            pointRadius: 3,
+            pointHoverRadius: 5,
+            fill: true
+         }]
+      },
+      options: {
+         responsive: true,
+         plugins: {
+            tooltip: {
+               callbacks: {
+                  label: function (context) {
+                     return (context.raw * 100).toFixed(1) + "%";
+                  }
+               }
+            },
+            legend: {
+               display: false
+            }
+         },
+         scales: {
+            y: {
+               beginAtZero: true,
+               max: 1,
+               ticks: {
+                  callback: function (value) {
+                     return (value * 100) + "%";
+                  }
+               },
+               title: {
+                  display: true,
+                  text: "Win Rate (%)"
+               }
+            },
+            x: {
+               title: {
+                  display: true,
+                  text: "Age"
+               }
+            }
+         }
+      }
+   });
+   }
+
+   function setupDistFightsPerWeightChart() {
+      const ctx = document.getElementById('distFightsPerWeightChart');
+      const data = {
+         labels: [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+         datasets: [
+            {
+               label: "Heavyweight",
+               data: [185, 60, 140, 89, 80, 87, 106, 56, 88, 231, 146, 210, 252, 331, 265, 299, 330, 326, 331, 484, 460, 400, 489, 498, 448, 441, 411, 395, 240],
+               borderColor: '#d41515',
+               backgroundColor: 'rgba(212, 21, 21, 0.1)'
+            },
+            {
+               label: "Light Heavyweight",
+               data: [7, 25, 8, 13, 64, 67, 34, 46, 115, 286, 283, 297, 387, 356, 385, 302, 382, 328, 313, 450, 468, 466, 572, 406, 468, 437, 433, 424, 309],
+               borderColor: '#000000',
+               backgroundColor: 'rgba(0, 0, 0, 0.1)'
+            },
+            {
+               label: "Middleweight",
+               data: [0, 59, 96, 85, 40, 93, 57, 61, 204, 296, 248, 454, 391, 548, 475, 508, 652, 635, 642, 692, 643, 540, 556, 500, 760, 785, 689, 733, 614],
+               borderColor: '#6c757d',
+               backgroundColor: 'rgba(108, 117, 125, 0.1)'
+            },
+            {
+               label: "Welterweight",
+               data: [0, 8, 15, 68, 80, 97, 58, 94, 188, 361, 368, 461, 600, 688, 596, 686, 806, 931, 990, 1137, 843, 975, 942, 632, 716, 761, 740, 789, 447],
+               borderColor: '#17a2b8',
+               backgroundColor: 'rgba(23, 162, 184, 0.1)'
+            },
+            {
+               label: "Lightweight",
+               data: [99, 48, 44, 49, 56, 61, 74, 48, 0, 164, 470, 554, 619, 677, 704, 738, 889, 1194, 1125, 1055, 818, 859, 923, 561, 783, 823, 943, 824, 547],
+               borderColor: '#28a745',
+               backgroundColor: 'rgba(40, 167, 69, 0.1)'
+            }
+         ]
+      };
+
+      new Chart(ctx, {
+         type: 'line',
+         data: data,
+         options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+               legend: {
+                  position: 'bottom'
+               }
+            },
+            scales: {
+               y: {
+                  beginAtZero: true
+               }
+            }
+         }
+      });
+   }
+
+   function setupWinRatioChart(data) {
+      const ctx = document.getElementById('winRatioChart');
+      const chartData = {'Decision': 3756, 'KO/TKO': 2518, 'Submission': 1534};
+
+      const labels = Object.keys(chartData); 
+      const values = Object.values(chartData); 
+
+      const dataset = {
+         labels: labels,
+         datasets: [{
+            data: values,
+            backgroundColor: ['#d41515', '#28a745', '#007bff'],
+            hoverOffset: 10
+         }]
+      };
+
+      new Chart(ctx, {
+         type: 'doughnut',
+         data: dataset,
+         options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+               tooltip: {
+                  callbacks: {
+                     label: function (context) {
+                        let value = context.parsed;
+                        let total = context.chart._metasets[context.datasetIndex].total;
+                        let percentage = ((value / total) * 100).toFixed(1);
+                        return `${context.label}: ${value} fights (${percentage}%)`;
+                     }
+                  }
+               },
+               legend: {
+                  position: 'bottom'
+               }
+            }
+         }
+      });
+   }
+
+
+   // Initialize charts when DOM is loaded
+   document.addEventListener('DOMContentLoaded', function () {
+      setupEventsPerYearChart();
+      setupDistFightsPerWeightChart();
+      setupWinRatioChart();
+      setupPerformanceByAgeChart();
+   });
+</script>
+
+</html>
