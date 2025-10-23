@@ -22,7 +22,7 @@ const resumeData = {
       skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
       logo: "aubay.jpeg",
       website: "https://www.sibs.com",
-      references: ["sibs.png", "mbway.png"],
+      references: ["mbway.png"],
       city: "Lisboa",
       country: "pt"
     },
