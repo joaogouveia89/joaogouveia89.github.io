@@ -15,14 +15,14 @@ const resumeData = {
   experiences: [
     {
       jobTitle: 'Android engineer',
-      company: 'SIBS',
+      company: 'Aubay',
       startDate: new Date(2024, 10, 25), // Note: In JavaScript, months are 0-indexkmmed
       endDate: null,
-      description: 'Working on the MB Way project, focusing on maintaining and modernizing the platform by suggesting improvements to the tech stack, conducting code reviews to ensure quality, and actively participating in task planning to align development efforts with business goals.',
+      description: 'Working on the MB Way project at SIBS — a leading Portuguese digital payments platform that enables instant money transfers using a phone number, similar in concept to Brazil’s Pix system. My work focuses on maintaining and modernizing the platform by proposing improvements to the tech stack, performing code reviews to ensure code quality, and actively participating in technical discussions to evaluate and solve emerging issues. I also contribute to task planning to ensure alignment between development priorities and business objectives.',
       skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
-      logo: "sibs.png",
+      logo: "aubay.jpeg",
       website: "https://www.sibs.com",
-      references: ["mbway.webp"],
+      references: ["sibs.png", "mbway.png"],
       city: "Lisboa",
       country: "pt"
     },
@@ -31,7 +31,7 @@ const resumeData = {
       company: 'Boost IT',
       startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
       endDate: new Date(2024, 9, 15),
-      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability. <b>The project was eventually discontinued due to strategic business decisions.</b>',
+      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability. The project was a temporary initiative aimed at helping supermarkets optimize shelf item management. Images captured by external cameras were processed on a server to generate task lists, which the Android app then displayed both textually and visually—highlighting in the images where user intervention was needed for each item.',
       skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
       logo: "boost.jpg",
       website: "https://www.symphonyai.com/retail-cpg/store-intelligence/",
@@ -425,7 +425,7 @@ function generateExperienceContainer(){
     if(references !== undefined){
       references.forEach((element) => {
         finalHtml += '<div class="d-flex flex-row gap-3 mt-3">'
-        finalHtml += '<img src="./images/companies/references/' + element + '" width="180">'
+        finalHtml += '<img src="./images/companies/references/' + element + '" width="120" style="padding-right: 24px;">'
       })
       
       // closing d-flex flex-row gap-3 mt-3
