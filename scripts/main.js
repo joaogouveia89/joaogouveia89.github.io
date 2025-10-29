@@ -18,120 +18,70 @@ const resumeData = {
       company: 'Aubay',
       startDate: new Date(2024, 10, 25), // Note: In JavaScript, months are 0-indexkmmed
       endDate: null,
-      description: 'Working on the MB Way project at SIBS — a leading Portuguese digital payments platform that enables instant money transfers using a phone number, similar in concept to Brazil’s Pix system. My work focuses on maintaining and modernizing the platform by proposing improvements to the tech stack, performing code reviews to ensure code quality, and actively participating in technical discussions to evaluate and solve emerging issues. I also contribute to task planning to ensure alignment between development priorities and business objectives.',
-      skillsUsed: ['android', 'git', 'mvvm', 'jetpack-compose', 'clean-arch', 'kotlin'],
-      logo: "aubay.jpeg",
-      website: "https://www.sibs.com",
-      references: ["mbway.png"],
-      city: "Lisboa",
-      country: "pt"
+      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
     },
     {
       jobTitle: 'Android engineer',
       company: 'Boost IT',
       startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
       endDate: new Date(2024, 9, 15),
-      description: 'Contributed to an Android project at Symphony AI, focusing on refactoring critical components to handle large data sets efficiently. Led efforts to modernize the app by implementing Jetpack Compose for improved UI performance and maintainability. The project was a temporary initiative aimed at helping supermarkets optimize shelf item management. Images captured by external cameras were processed on a server to generate task lists, which the Android app then displayed both textually and visually—highlighting in the images where user intervention was needed for each item.',
       skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
-      logo: "boost.jpg",
-      website: "https://www.symphonyai.com/retail-cpg/store-intelligence/",
-      city: "Lisboa",
-      country: "pt"
     },
     {
       jobTitle: 'Mobile engineer',
       company: 'Bosch PT',
       startDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexkmmed
       endDate: new Date(2024, 1, 2),
-      description: 'Key contributor to "Refine My Site," a mobile app for managing construction projects on Android and iOS. Developed features like image uploads, offline functionality, and push notifications, collaborating with international teams for successful project delivery.',
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
-      logo: "bosch.png",
-      website: "https://www.bosch-pt.com/ptlegalpages/us/ptna/en/refinemysiteweb/servicedescription/",
-      city: "Lisboa",
-      country: "pt"
     },
     {
       jobTitle: 'Mobile Engineer',
       company: 'Critical Techworks',
       startDate: new Date(2019, 4, 6), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
-      description: "Key team member in developing a Kotlin-based media player app for BMW's in-car entertainment system, supporting audio features through integrations with Spotify API, Apple CarPlay, USB storage, and tuner interfaces. Contributed feature improvements and collaborated with teams in Portugal, Germany, and China for successful project outcomes.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin'],
-      logo: "ctw.svg",
-      website: "https://www.criticaltechworks.com/",
-      references: ["bmw.png"],
-      city: "Lisboa",
-      country: "pt"
     },
     {
       jobTitle: 'Android developer',
       company: 'Ioasys',
       startDate: new Date(2018, 3, 2), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2019, 0, 4), // Note: In JavaScript, months are 0-indexed
-      description: "Focused on developing a Java-based Android app connecting teachers with a bookstore platform, using MVVM architecture, Room database, and Retrofit for HTTP requests. Also contributed to other development projects within the software factory.",
       skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
-      logo: "ioasys.jpg",
-      website: "https://ioasys.com.br/",
-      references: ["saraiva.png"],
-      city: "Belo Horizonte",
-      country: "br"
     },
     {
       jobTitle: 'Android developer',
       company: 'Life Link',
       startDate: new Date(2017, 4, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2017, 11, 22), // Note: In JavaScript, months are 0-indexed
-      description: "Developed an Android application in Java to communicate with hardware via Bluetooth 4.0. Facilitated data transmission from the hardware to a remote server via an API, enhancing data management and accessibility.",
       skillsUsed: ['android', 'git', 'java', 'bluetooth 4.0'],
-      logo: "lifelink.webp",
-      website: "https://www.lifelink.com.br/",
-      city: "Belo Horizonte",
-      country: "br"
     },
     {
       jobTitle: 'Internship',
       company: 'Avenue Code',
       startDate: new Date(2015, 0, 12), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
-      description: 'I worked on ACDC app, which was a project used internally by the company employees to control their worked hours and vacation management. It was my first contact with Ruby on Rails and PostgresSQL. Also, I had contact with some frontend features like Angular and Ember, and Git for versioning. This project was challenging because so many people in many branches were using it, and there were so many issues to solve and implement.',
       skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql', 'git', 'scrum'],
-      logo: "avenuecode.svg",
-      website: "https://www.avenuecode.com/",
-      city: "Belo Horizonte",
-      country: "br"
     },
     {
       jobTitle: 'Internship',
       company: 'GDAX Contact Center',
       startDate: new Date(2014, 9, 6), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2015, 0, 9), // Note: In JavaScript, months are 0-indexed
-      description: 'GDAX is a telemarketing company, and the application I worked on was for sales recording by the team who call the clients. For this application, it used a framework created internally written in PHP and using a MySQL database. It was my very first contact with code versioning using SVN and some frontend tasks.',
       skillsUsed: ['php', 'mysql'],
-      logo: "gdax.jpeg",
-      city: "Belo Horizonte",
-      country: "br"
     },
     {
       jobTitle: 'Vacation internship',
       company: 'TCA',
       startDate: new Date(2014, 5, 2), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2014, 6, 2), // Note: In JavaScript, months are 0-indexed
-      description: 'Very first contact professionally with programming. I spent a month working on an application for file sharing between the employees of the engineering projects of the company, taking into consideration privileges and access permissions.',
       skillsUsed: ['php', 'mysql'],
-      logo: "tca.png",
-      website: "https://www.timeconsult.com.br/",
-      city: "Recife",
-      country: "br"
     },
     {
       jobTitle: 'Digital introduction instructor',
       company: 'Autonomous',
       startDate: new Date(2009, 6, 1), // Note: In JavaScript, months are 0-indexed
       endDate: new Date(2017, 6, 31), // Note: In JavaScript, months are 0-indexed
-      description: "Private classes on digital introduction to elderly people. In these classes, I addressed topics like email and social networks usage (Instagram, Facebook, Gmail) and some useful usage habits like transferring pictures from the smartphone to the PC, pairing the smartphone to other devices in the client's home, and so on.",
       skillsUsed: [],
-      city: "Belo Horizonte",
-      country: "br"
     },
   ],
   education: [
@@ -176,7 +126,7 @@ const resumeData = {
   ],
 };
 
-function openGithub(){
+function openGithub() {
   gtag('event', 'recruiter_open_link', {
     event_category: 'Github',
     event_label: 'Profile',
@@ -184,14 +134,14 @@ function openGithub(){
   window.open("https://github.com/" + resumeData["github"], '_blank');
 }
 
-function openLinkedin(){
+function openLinkedin() {
   gtag('event', 'recruiter_open_link', {
     event_category: 'Linkedin'
   });
   window.open(resumeData["linkedin"], '_blank');
 }
 
-function openRandomUserRepo(){
+function openRandomUserRepo() {
   gtag('event', 'recruiter_open_link', {
     event_category: 'Github',
     event_label: 'Random User',
@@ -199,7 +149,7 @@ function openRandomUserRepo(){
   window.open("https://github.com/joaogouveia89/Random-User", '_blank');
 }
 
-function openTrafficSimulationRepo(){
+function openTrafficSimulationRepo() {
   gtag('event', 'recruiter_open_link', {
     event_category: 'Github',
     event_label: 'Traffic Simulation',
@@ -207,23 +157,23 @@ function openTrafficSimulationRepo(){
   window.open("https://github.com/joaogouveia89/traffic-simulation", '_blank');
 }
 
-function getAge(){
+function getAge() {
   const today = new Date();
   const birthDate = resumeData["birthDate"];
-  
+
   var age = today.getFullYear() - birthDate.getFullYear();
-  
+
   // Check if the birthday hasn't occurred yet this year
-  if (today.getMonth() <   birthDate.getMonth()) {
+  if (today.getMonth() < birthDate.getMonth()) {
     age--;
   }
-  
+
   return age;
-  
+
 }
 
-function emailToClipboard(){
-   navigator.clipboard.writeText(resumeData["email"]);
+function emailToClipboard() {
+  navigator.clipboard.writeText(resumeData["email"]);
 }
 
 function fetchSkillsSummary() {
@@ -305,7 +255,7 @@ function sortObjectByValueDesc(inputObject) {
   return sortedObject;
 }
 
-function experiencePercentage(experience){
+function experiencePercentage(experience) {
   const fullExperience = experienceTimeInMonths();
   /*
   fullExperience ----- 100
@@ -314,13 +264,13 @@ function experiencePercentage(experience){
   return (experience * 100) / fullExperience;
 }
 
-function generateSkillsContainer(skillsSummary, experienceMonths){
+function generateSkillsContainer(skillsSummary, experienceMonths) {
   newRow = true;
   finalHtml = '';
   for (const skill in skillsSummary) {
     if (skillsSummary.hasOwnProperty(skill)) {
       const experienceInMonths = skillsSummary[skill];
-      if(newRow){
+      if (newRow) {
         finalHtml += '<div class="row">';
       }
       finalHtml += '<div class="col-md-6">'
@@ -331,12 +281,12 @@ function generateSkillsContainer(skillsSummary, experienceMonths){
       finalHtml += '<span class="progress-value">' + formatMonthsAsDuration(experienceInMonths) + '</span>';
       // close progress
       finalHtml += '</div>';
-      
+
       // close progress-container progress-primary
       finalHtml += '</div>';
       //closing col
       finalHtml += '</div>';
-      if(!newRow){
+      if (!newRow) {
         finalHtml += '</div>';
       }
       newRow = !newRow;
@@ -345,10 +295,10 @@ function generateSkillsContainer(skillsSummary, experienceMonths){
   return finalHtml;
 }
 
-function generateEducationContainer(){
+function generateEducationContainer() {
   data = resumeData.education;
   finalHtml = '';
-  for(let idx = 0; idx < data.length; idx++){
+  for (let idx = 0; idx < data.length; idx++) {
     finalHtml += '<div class="card">';
     finalHtml += '<div class="row align-items-center">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
@@ -365,7 +315,7 @@ function generateEducationContainer(){
     finalHtml += '<div class="card-body  text-center"  style="min-height:0px;">';
     finalHtml += '<div class="h5">' + data[idx].title + '</div>';
     finalHtml += '<p class="category">' + data[idx].category + '</p>';
-    
+
     // closing card-body
     finalHtml += '</div>';
     // closing col-md-9" data-aos="fade-left
@@ -378,7 +328,7 @@ function generateEducationContainer(){
   return finalHtml;
 }
 
-function generateExperienceContainer(){
+function generateExperienceContainer() {
 
   /*
     jobTitle: 'Vacation internship',
@@ -390,18 +340,18 @@ function generateExperienceContainer(){
   */
   data = resumeData.experiences;
   finalHtml = '';
-  for(let idx = 0; idx < data.length; idx++){
+  for (let idx = 0; idx < data.length; idx++) {
     let endDateYear = data[idx].endDate == null ? "CURRENT" : data[idx].endDate.getFullYear();
     finalHtml += '<div class="card">';
     finalHtml += '<div class="row">';
     finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
     finalHtml += '<div class="card-body cc-education-header">';
-    if(data[idx].logo === undefined){
+    if (data[idx].logo === undefined) {
       finalHtml += '<div class="h5">' + data[idx].company + '</div>';
-    }else{
+    } else {
       finalHtml += '<div><img width=200" src="./images/companies/' + data[idx].logo + '"</img></div>'
     }
-    
+
     finalHtml += '<p style="padding-top:24px; font-size:20px">' + data[idx].startDate.getFullYear() + ' - ' + endDateYear + '</p>';
 
 
@@ -416,18 +366,18 @@ function generateExperienceContainer(){
     finalHtml += '<img class="my-auto" style="padding-left:12px;" src="https://flagcdn.com/w40/' + data[idx].country + '.png" width="40" alt="' + data[idx].country + ' Flag" style="margin-top:10px;"></div>'
     finalHtml += '<p class="category">' + data[idx].skillsUsed.join(", ") + '</p>';
     finalHtml += '<p>' + data[idx].description + '</p>';
-    if(data[idx].website  !== undefined){
+    if (data[idx].website !== undefined) {
       const websiteShort = new URL(data[idx].website).origin;
       finalHtml += '<p><strong>Website:</strong> <a href="' + data[idx].website + '" target="_blank">' + websiteShort + '</a></p>'
     }
 
     const references = data[idx].references
-    if(references !== undefined){
+    if (references !== undefined) {
       references.forEach((element) => {
         finalHtml += '<div class="d-flex flex-row gap-3 mt-3">'
         finalHtml += '<img src="./images/companies/references/' + element + '" width="120" style="padding-right: 24px;">'
       })
-      
+
       // closing d-flex flex-row gap-3 mt-3
       finalHtml += '</div>';
     }
@@ -446,10 +396,10 @@ function generateExperienceContainer(){
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
-  AOS.init( {
+  AOS.init({
     // uncomment below for on-scroll animations to played only once
     // once: true  
   }); // initialize animate on scroll library
@@ -462,21 +412,21 @@ $(document).ready(function() {
 
     // Set a timeout to hide the popover after 500ms
     setTimeout(function () {
-        $popover.popover('hide');
+      $popover.popover('hide');
     }, 800);
   });
 
   let isShowModel = localStorage.getItem("hasAnswered");
 
-  if(isShowModel != 'true'){
+  if (isShowModel != 'true') {
     $('#visitor-profile-modal').modal('toggle');
   }
 
 
-  $("#dialog-send").click(function(){
+  $("#dialog-send").click(function () {
     const stack = $("input[name='stack']:checked").val();
 
-    if(stack != undefined){
+    if (stack != undefined) {
       gtag('event', 'recruiter_dialog_response', {
         event_category: 'Stack Info',
         event_label: `${stack}`,
@@ -486,7 +436,7 @@ $(document).ready(function() {
     $('#visitor-profile-modal').modal('toggle');
   });
 
-  $("#dialog-dwa").click(function(){
+  $("#dialog-dwa").click(function () {
     gtag('event', 'recruiter_dialog_response', {
       event_category: 'Stack Info',
       event_label: `Dont want to answer`,
@@ -509,7 +459,7 @@ $(document).ready(function() {
   $("#about-email").html(resumeData["email"]);
   $("#about-baseTown").html(resumeData["baseTown"]);
   $("#about-languages").html(resumeData["languages"].map((lang) => lang["language"]).join(", "));
-  
+
   //skills section
   skillsSummary = sortObjectByValueDesc(fetchSkillsSummary());
   $("#skills-container").html(generateSkillsContainer(skillsSummary, experienceMonths));
@@ -517,42 +467,39 @@ $(document).ready(function() {
   //education section
   $("#education-container").html(generateEducationContainer());
 
-  //experience section
-  $("#experience-container").html(generateExperienceContainer());
-
   $("#footer-name").html(resumeData["shortName"]);
 });
 
 // Smooth scroll for links with hashes
 $('a.smooth-scroll')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-    && 
-    location.hostname == this.hostname
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      // Only prevent default if animation is actually gonna happen
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000, function() {
-        // Callback after animation
-        // Must change focus!
-        var $target = $(target);
-        $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
-          return false;
-        } else {
-          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-          $target.focus(); // Set focus again
-        };
-      });
+  .click(function (event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function () {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
     }
-  }
-});
+  });

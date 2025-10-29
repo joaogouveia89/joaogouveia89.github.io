@@ -39,38 +39,6 @@
 
 <body id="top">
     <header>
-        <div class="modal fade" tabindex="-1" role="dialog" id="visitor-profile-modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Hello, visitor!</h5>
-                    </div>
-                    <div class="modal-body">
-                        <p>To personalize your experience, we would like to know:</p>
-                        <h6>Which stack are you looking for?</h6>
-                        <!-- Stack Options -->
-                        <div class="stack-options">
-                            <label for="android">
-                                <input type="radio" name="stack" value="android" id="android" required> Android
-                            </label>
-                            <label for="ror">
-                                <input type="radio" name="stack" value="ror" id="ror" required> Ruby on Rails
-                            </label>
-                            <label for="cpp">
-                                <input type="radio" name="stack" value="cpp" id="cpp" required> C++
-                            </label>
-                        </div>
-                        <p class="privacy-info" style="font-size: 12px; color: #6c757d; margin-top: 15px;">
-                            Your responses will only be used for personal analytics purposes and will not be shared with
-                            third parties.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="dialog-send">Send</button>
-                        <button type="button" class="btn btn-secondary" id="dialog-dwa">I don't want to answer</button>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="profile-page sidebar-collapse">
             <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -414,73 +382,339 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                     <div id="experience-container">
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                    data-aos-duration="500">
-                                    <div class="card-body cc-education-header">
-                                        <p>2013 - 2015</p>
-                                        <div class="h5">Master's Degree</div>
+                        <div id="experience-container">
+                            <!-- AUBAY -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/aubay.jpeg"></div>
+                                            <p style="padding-top:24px; font-size:20px">2024 - CURRENT</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                    <div class="card-body">
-                                        <div class="h5">Master of Information Technology</div>
-                                        <p class="category">University of Computer Science</p>
-                                        <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper
-                                            magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero
-                                            nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque
-                                            cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                                            pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet
-                                            at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Android engineer - Lisboa</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/pt.png" width="40" alt="pt Flag">
+                                            </div>
+                                            <p class="category">android, git, mvi, jetpack-compose, clean-arch, kotlin
+                                            </p>
+                                            <p>Working on the MB Way project at SIBS — a leading Portuguese digital
+                                                payments platform that enables instant money transfers using a phone
+                                                number, similar in concept to Brazil’s Pix system. My work focuses on
+                                                maintaining and modernizing the platform by proposing improvements to
+                                                the tech stack, performing code reviews to ensure code quality, and
+                                                actively participating in technical discussions to evaluate and solve
+                                                emerging issues. I also contribute to task planning to ensure alignment
+                                                between development priorities and business objectives.</p>
+                                            <iframe width="560" height="315"
+                                                src="https://www.youtube.com/embed/N4ysJ0oGY3Q?si=GRKBHHgSHstMB0BH"
+                                                title="MBWAY presentation" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                            <p><strong>Website:</strong> <a href="https://www.sibs.com"
+                                                    target="_blank">https://www.sibs.com</a></p>
+                                            <div class="d-flex flex-row gap-3 mt-3">
+                                                <img src="./images/companies/references/mbway.png" width="100">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                    data-aos-duration="500">
-                                    <div class="card-body cc-education-header">
-                                        <p>2009 - 2013</p>
-                                        <div class="h5">Bachelor's Degree</div>
+
+                            <!-- Boost IT -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/boost.jpg"></div>
+                                            <p style="padding-top:24px; font-size:20px">2024 - 2024</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                    <div class="card-body">
-                                        <div class="h5">Bachelor of Computer Science</div>
-                                        <p class="category">University of Computer Science</p>
-                                        <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper
-                                            magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero
-                                            nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque
-                                            cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                                            pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet
-                                            at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Android engineer - Lisboa</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/pt.png" width="40" alt="pt Flag">
+                                            </div>
+                                            <p class="category">android, git, mvi, jetpack-compose, clean-arch, kotlin
+                                            </p>
+                                            <p>CContributed to an Android project at Symphony AI, focusing on
+                                                refactoring critical components to handle large data sets efficiently.
+                                                Led efforts to modernize the app by implementing Jetpack Compose for
+                                                improved UI performance and maintainability. The project was a temporary
+                                                initiative aimed at helping supermarkets optimize shelf item management.
+                                                Images captured by external cameras were processed on a server to
+                                                generate task lists, which the Android app then displayed both textually
+                                                and visually—highlighting in the images where user intervention was
+                                                needed for each item.</b></p>
+                                            <p><strong>Website:</strong> <a
+                                                    href="https://www.symphonyai.com/retail-cpg/store-intelligence/"
+                                                    target="_blank">https://www.symphonyai.com</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
-                                    data-aos-duration="500">
-                                    <div class="card-body cc-education-header">
-                                        <p>2007 - 2009</p>
-                                        <div class="h5">High School</div>
+
+                            <!-- Bosch PT -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/bosch.png"></div>
+                                            <p style="padding-top:24px; font-size:20px">2022 - 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Mobile engineer - Lisboa</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/pt.png" width="40" alt="pt Flag">
+                                            </div>
+                                            <p class="category">android, scrum, git, mvvm, jetpack-compose, kmm, flow,
+                                                kotlin</p>
+                                            <p>Key contributor to "Refine My Site," a mobile app for managing
+                                                construction projects on Android and iOS. Developed features like image
+                                                uploads, offline functionality, and push notifications, collaborating
+                                                with international teams for successful project delivery.</p>
+                                            <p><strong>Website:</strong> <a
+                                                    href="https://www.bosch-pt.com/ptlegalpages/us/ptna/en/refinemysiteweb/servicedescription/"
+                                                    target="_blank">https://www.bosch-pt.com</a></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                                    <div class="card-body">
-                                        <div class="h5">Science and Mathematics</div>
-                                        <p class="category">School of Secondary board</p>
-                                        <p>Euismod massa scelerisque suspendisse fermentum habitant vitae ullamcorper
-                                            magna quam iaculis, tristique sapien taciti mollis interdum sagittis libero
-                                            nunc inceptos tellus, hendrerit vel eleifend primis lectus quisque
-                                            cubilia sed mauris. Lacinia porta vestibulum diam integer quisque eros
-                                            pulvinar curae, curabitur feugiat arcu vivamus parturient aliquet laoreet
-                                            at, eu etiam pretium molestie ultricies sollicitudin dui.</p>
+                            </div>
+
+                            <!-- Critical Techworks -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/ctw.svg"></div>
+                                            <p style="padding-top:24px; font-size:20px">2019 - 2022</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Mobile Engineer - Lisboa</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/pt.png" width="40" alt="pt Flag">
+                                            </div>
+                                            <p class="category">android, scrum, git, mvvm, android-auto, room db,
+                                                live-data, kotlin</p>
+                                            <p>Key team member in developing a Kotlin-based media player app for BMW's
+                                                in-car entertainment system, supporting audio features through
+                                                integrations with Spotify API, Apple CarPlay, USB storage, and tuner
+                                                interfaces. Contributed feature improvements and collaborated with teams
+                                                in Portugal, Germany, and China for successful project outcomes.</p>
+                                            <p><strong>Website:</strong> <a href="https://www.criticaltechworks.com/"
+                                                    target="_blank">https://www.criticaltechworks.com</a></p>
+                                            <div class="d-flex flex-row gap-3 mt-3">
+                                                <img src="./images/companies/references/bmw.png" width="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ioasys -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/ioasys.jpg"></div>
+                                            <p style="padding-top:24px; font-size:20px">2018 - 2019</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Android developer - Belo Horizonte</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category">android, scrum, git, mvvm, rxjava, java</p>
+                                            <p>Focused on developing a Java-based Android app connecting teachers with a
+                                                bookstore platform, using MVVM architecture, Room database, and Retrofit
+                                                for HTTP requests. Also contributed to other development projects within
+                                                the software factory.</p>
+                                            <p><strong>Website:</strong> <a href="https://ioasys.com.br/"
+                                                    target="_blank">https://ioasys.com.br</a></p>
+                                            <div class="d-flex flex-row gap-3 mt-3">
+                                                <img src="./images/companies/references/saraiva.png" width="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Life Link -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/lifelink.webp"></div>
+                                            <p style="padding-top:24px; font-size:20px">2017 - 2017</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Android developer - Belo Horizonte</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category">android, git, java, bluetooth 4.0</p>
+                                            <p>Developed an Android application in Java to communicate with hardware via
+                                                Bluetooth 4.0. Facilitated data transmission from the hardware to a
+                                                remote server via an API, enhancing data management and accessibility.
+                                            </p>
+                                            <p><strong>Website:</strong> <a href="https://www.lifelink.com.br/"
+                                                    target="_blank">https://www.lifelink.com.br</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Avenue Code -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/avenuecode.svg"></div>
+                                            <p style="padding-top:24px; font-size:20px">2015 - 2016</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Internship - Belo Horizonte</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category">ruby-on-rails, ruby, postgresql, git, scrum</p>
+                                            <p>I worked on ACDC app, which was a project used internally by the company
+                                                employees to control their worked hours and vacation management. It was
+                                                my first contact with Ruby on Rails and PostgresSQL. Also, I had contact
+                                                with some frontend features like Angular and Ember, and Git for
+                                                versioning. This project was challenging because so many people in many
+                                                branches were using it, and there were so many issues to solve and
+                                                implement.</p>
+                                            <p><strong>Website:</strong> <a href="https://www.avenuecode.com/"
+                                                    target="_blank">https://www.avenuecode.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GDAX Contact Center -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div class="h5">GDAX Contact Center</div>
+                                            <p style="padding-top:24px; font-size:20px">2014 - 2015</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Internship - Belo Horizonte</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category">php, mysql</p>
+                                            <p>GDAX is a telemarketing company, and the application I worked on was for
+                                                sales recording by the team who call the clients. For this application,
+                                                it used a framework created internally written in PHP and using a MySQL
+                                                database. It was my very first contact with code versioning using SVN
+                                                and some frontend tasks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TCA -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div><img width="200" src="./images/companies/tca.png"></div>
+                                            <p style="padding-top:24px; font-size:20px">2014 - 2014</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Vacation internship - Recife</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category">php, mysql</p>
+                                            <p>Very first contact professionally with programming. I spent a month
+                                                working on an application for file sharing between the employees of the
+                                                engineering projects of the company, taking into consideration
+                                                privileges and access permissions.</p>
+                                            <p><strong>Website:</strong> <a href="https://www.timeconsult.com.br/"
+                                                    target="_blank">https://www.timeconsult.com.br</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Autonomous -->
+                            <div class="card">
+                                <div class="row">
+                                    <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body cc-education-header">
+                                            <div class="h5">Autonomous</div>
+                                            <p style="padding-top:24px; font-size:20px">2009 - 2017</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9" data-aos="fade-left" data-aos-offset="50"
+                                        data-aos-duration="500">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <span class="h5">Digital introduction instructor - Belo Horizonte</span>
+                                                <img class="my-auto" style="padding-left:12px;"
+                                                    src="https://flagcdn.com/w40/br.png" width="40" alt="br Flag">
+                                            </div>
+                                            <p class="category"></p>
+                                            <p>Private classes on digital introduction to elderly people. In these
+                                                classes, I addressed topics like email and social networks usage
+                                                (Instagram, Facebook, Gmail) and some useful usage habits like
+                                                transferring pictures from the smartphone to the PC, pairing the
+                                                smartphone to other devices in the client's home, and so on.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -573,16 +807,19 @@
                                     <p>
                                         UFC Data Analysis Dashboard is an end-to-end data analysis project
                                         that explores over 30 years of UFC fights.
-                                        The work includes <strong>descriptive statistics</strong>, <strong>comparisons analytics</strong> and
+                                        The work includes <strong>descriptive statistics</strong>, <strong>comparisons
+                                            analytics</strong> and
                                         <strong>performance metrics</strong> to identify winning patterns,
-                                        impact of age, fighting styles, and historical rivalries. The results are presented in a dashboard
+                                        impact of age, fighting styles, and historical rivalries. The results are
+                                        presented in a dashboard
                                         interactive and in the repository notebooks,
                                         combining <em>Python, Pandas, Jupyter and interactive visualizations</em>.
                                     </p>
                                     <a href="ufc_report.html" target="_blank" class="btn btn-link">
                                         <i class="fa fa-area-chart fa-2x"></i> Dashboard
                                     </a>
-                                    <a href="https://github.com/joaogouveia89/ufc-data-study-case" target="_blank" class="btn btn-link">
+                                    <a href="https://github.com/joaogouveia89/ufc-data-study-case" target="_blank"
+                                        class="btn btn-link">
                                         <i class="fa fa-github fa-2x"></i> GitHub
                                     </a>
                                 </div>
