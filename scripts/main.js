@@ -84,32 +84,6 @@ const resumeData = {
       skillsUsed: [],
     },
   ],
-  education: [
-    {
-      university: 'Udacity',
-      title: 'Nanodegree C++ Program',
-      category: 'online course',
-      startDate: new Date(2021, 4, 1), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2021, 8, 1), // Note: In JavaScript, months are 0-indexed
-      logo: "udacity.png"
-    },
-    {
-      university: 'FUMEC',
-      title: 'Bsc Computer Science',
-      category: 'university',
-      startDate: new Date(2014, 7, 1), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2018, 11, 10), // Note: In JavaScript, months are 0-indexed
-      logo: "fumec.png"
-    },
-    {
-      university: 'PUCMINAS',
-      title: 'Automation Engineering',
-      category: 'university',
-      startDate: new Date(2009, 7, 1), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2014, 6, 1), // Note: In JavaScript, months are 0-indexed
-      logo: "pucmg.png"
-    },
-  ],
   languages: [
     {
       language: 'English',
@@ -295,38 +269,6 @@ function generateSkillsContainer(skillsSummary, experienceMonths) {
   return finalHtml;
 }
 
-function generateEducationContainer() {
-  data = resumeData.education;
-  finalHtml = '';
-  for (let idx = 0; idx < data.length; idx++) {
-    finalHtml += '<div class="card">';
-    finalHtml += '<div class="row align-items-center">';
-    finalHtml += '<div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">';
-    finalHtml += '<div class="card-body cc-education-header text-center">';
-    finalHtml += '<div><img src="./images/universities/' + data[idx].logo + '"</img></div>'
-    finalHtml += '<p style="padding-top:24px; font-size:20px">' + data[idx].startDate.getFullYear() + ' - ' + data[idx].endDate.getFullYear() + '</p>';
-
-    // closing card-body cc-education-header
-    finalHtml += '</div>';
-    //closing col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500"
-    finalHtml += '</div>';
-
-    finalHtml += '<div class="col-md-9 d-flex flex-column justify-content-center align-items-center aos-init aos-animate" data-aos-offset="50" data-aos-duration="500">';
-    finalHtml += '<div class="card-body  text-center"  style="min-height:0px;">';
-    finalHtml += '<div class="h5">' + data[idx].title + '</div>';
-    finalHtml += '<p class="category">' + data[idx].category + '</p>';
-
-    // closing card-body
-    finalHtml += '</div>';
-    // closing col-md-9" data-aos="fade-left
-    finalHtml += '</div>';
-    // closing row
-    finalHtml += '</div>';
-    //closing card
-    finalHtml += '</div>';
-  }
-  return finalHtml;
-}
 
 function generateExperienceContainer() {
 
