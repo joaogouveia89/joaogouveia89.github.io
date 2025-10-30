@@ -358,35 +358,6 @@ $(document).ready(function () {
     }, 800);
   });
 
-  let isShowModel = localStorage.getItem("hasAnswered");
-
-  if (isShowModel != 'true') {
-    $('#visitor-profile-modal').modal('toggle');
-  }
-
-
-  $("#dialog-send").click(function () {
-    const stack = $("input[name='stack']:checked").val();
-
-    if (stack != undefined) {
-      gtag('event', 'recruiter_dialog_response', {
-        event_category: 'Stack Info',
-        event_label: `${stack}`,
-      });
-    }
-    localStorage.setItem("hasAnswered", true);
-    $('#visitor-profile-modal').modal('toggle');
-  });
-
-  $("#dialog-dwa").click(function () {
-    gtag('event', 'recruiter_dialog_response', {
-      event_category: 'Stack Info',
-      event_label: `Dont want to answer`,
-    });
-    localStorage.setItem("hasAnswered", true);
-    $('#visitor-profile-modal').modal('hide');
-  });
-
   experienceMonths = experienceTimeInMonths();
 
   //Fill CV
@@ -395,19 +366,11 @@ $(document).ready(function () {
   $("#job-title").html(resumeData["jobTitle"]);
 
   //about section
-  $("#about-first-parag").html("Hello! I am " + resumeData["shortName"] + ". " + resumeData["jobTitle"]);
-  $("#about-second-parag").html(resumeData["description"]);
   $("#about-age").html(getAge());
-  $("#about-email").html(resumeData["email"]);
-  $("#about-baseTown").html(resumeData["baseTown"]);
-  $("#about-languages").html(resumeData["languages"].map((lang) => lang["language"]).join(", "));
 
   //skills section
   skillsSummary = sortObjectByValueDesc(fetchSkillsSummary());
   $("#skills-container").html(generateSkillsContainer(skillsSummary, experienceMonths));
-
-  //education section
-  $("#education-container").html(generateEducationContainer());
 
   $("#footer-name").html(resumeData["shortName"]);
 });
