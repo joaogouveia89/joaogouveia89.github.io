@@ -9,7 +9,6 @@ const resumeData = {
   email: 'j.lucas.gouveia@gmail.com',
   linkedin: "https://www.linkedin.com/in/jo%C3%A3o-lucas-veloso-gouveia-1319a38a/",
   github: 'joaogouveia89',
-  jobTitle: 'Software Engineer',
   stackToDisplay: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kotlin', 'java', 'ruby-on-rails'],
   description: 'Software engineer with experience in native Android development using Kotlin and Java, along with a strong background in libraries and frameworks for the platform. Recently, I have been expanding my skill set into data science, data analysis, and machine learning, exploring new ways to solve problems with data-driven approaches. I rely on a self-task list and a professional journal to track my activities, progress, and upcoming tasks. Jiu-jitsu is my favorite hobby, and I practice it three times a week, which has greatly contributed to my personal and professional growth.',
   experiences: [
@@ -363,7 +362,6 @@ $(document).ready(function () {
   //Fill CV
   document.title = resumeData["shortName"] + " - Creative CV";
   $("#profile-title").html(resumeData["name"]);
-  $("#job-title").html(resumeData["jobTitle"]);
 
   //about section
   $("#about-age").html(getAge());
