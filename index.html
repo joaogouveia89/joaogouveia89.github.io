@@ -1068,7 +1068,8 @@
                             <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50"
                                 data-aos-duration="500">
                                 <div class="card-body cc-projects-header">
-                                    <div class="h5">Number classificator app(MNIST Dataset)</div>
+                                    <!-- Updated Name -->
+                                    <div class="h5">InkSight - AI Digit Recognizer</div>
                                     <br />
                                     <span>
                                         <i style="font-size: 64px;" class="devicon-android-plain-wordmark"></i>
@@ -1080,40 +1081,45 @@
                             <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                                 <div class="card-body">
                                     <p>
-                                        A practical Android application combining <strong>mobile development</strong>
-                                        and <strong>machine learning</strong>, built as part of
+                                        <strong>InkSight</strong> is a high-performance Android application that merges
+                                        <strong>computer vision</strong> and <strong>deep learning</strong> to recognize
+                                        handwritten digits in real time. Developed as an evolution of the
                                         <a href="https://www.udemy.com/course/the-data-science-course-complete-data-science-bootcamp"
-                                            target="_blank">The Data Science Course 2025</a>.
-                                        The app captures grayscale camera frames, preprocesses a central region, resizes
-                                        it to 28x28, and uses a
-                                        <strong>TensorFlow Lite</strong> model to predict handwritten digits in real
-                                        time.
+                                            target="_blank">The Data Science Course 2025</a>, it transforms a classic
+                                        MNIST model into a robust mobile tool.
                                     </p>
 
                                     <p>
-                                        Designed as a proof-of-concept, the project demonstrates embedding a classic
-                                        deep learning model into a real-time mobile application,
-                                        leveraging <strong>CameraX</strong> for live input, <strong>ViewModel</strong>
-                                        and <strong>coroutines</strong> for clean separation of UI and processing,
-                                        and histogram-based filtering to reduce redundant predictions.
+                                        Built with a focus on <strong>Clean Architecture</strong>, the app features a
+                                        decoupled processing pipeline that handles grayscale conversion, central
+                                        cropping,
+                                        and <strong>TensorFlow Lite</strong> inference. It implements custom
+                                        <strong>stability logic</strong> to ensure predictions are only triggered when
+                                        the
+                                        camera is steady, providing a seamless and non-flickering user experience.
                                     </p>
 
                                     <ul>
-                                        <li><strong>Real-time ML integration:</strong> TensorFlow Lite model predicts
-                                            handwritten digits from live camera frames.</li>
-                                        <li><strong>Preprocessing:</strong> Grayscale conversion, central cropping, and
-                                            resizing to 28x28 pixels.</li>
-                                        <li><strong>Architecture:</strong> MVVM pattern, coroutines for background
-                                            processing, clean separation of UI and logic.</li>
-                                        <li><strong>Future improvements:</strong> Better maintainability, cleaner
-                                            abstractions, UI tests, and architecture refinements.</li>
+                                        <li><strong>Intelligent Stability Tracking:</strong> Uses histogram-based
+                                            analysis to
+                                            detect camera movement and lock predictions for a consistent UI.</li>
+                                        <li><strong>Clean Pipeline Architecture:</strong> Decoupled components for frame
+                                            gating, preprocessing, and inference managed via <strong>Hilt DI</strong>.
+                                        </li>
+                                        <li><strong>Real-time ML:</strong> Embedded TensorFlow 2.0 model optimized for
+                                            mobile,
+                                            running at a targeted responsive frame rate.</li>
+                                        <li><strong>Modern UI/UX:</strong> Fully reactive interface built with
+                                            <strong>Jetpack
+                                                Compose</strong> and <strong>CameraX Viewfinder</strong>.</li>
                                     </ul>
 
                                     <p class="stack">
                                         <strong>Tech stack:</strong> Kotlin · Jetpack Compose · CameraX · Hilt ·
                                         TensorFlow Lite · Coroutines · MVVM · Unit Testing
                                     </p>
-                                    <a href="https://github.com/joaogouveia89/MNist-Model-JLVG" target="_blank"
+                                    <!-- Updated Link -->
+                                    <a href="https://github.com/joaogouveia89/InkSight" target="_blank"
                                         class="btn btn-link">
                                         <i class="fa fa-github fa-2x"></i> GitHub
                                     </a>
