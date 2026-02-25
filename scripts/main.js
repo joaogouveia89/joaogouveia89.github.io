@@ -13,74 +13,74 @@ const resumeData = {
   description: 'Software engineer with experience in native Android development using Kotlin and Java, along with a strong background in libraries and frameworks for the platform. Recently, I have been expanding my skill set into data science, data analysis, and machine learning, exploring new ways to solve problems with data-driven approaches. I rely on a self-task list and a professional journal to track my activities, progress, and upcoming tasks. Jiu-jitsu is my favorite hobby, and I practice it three times a week, which has greatly contributed to my personal and professional growth.',
   experiences: [
     {
-      jobTitle: 'Android engineer',
+      jobTitle: 'Senior Android Engineer',
       company: 'Aubay',
-      startDate: new Date(2024, 10, 25), // Note: In JavaScript, months are 0-indexkmmed
+      city: 'Lisboa',
+      country: 'pt',
+      startDate: new Date(2024, 10, 1), // Novembro 2024
       endDate: null,
-      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
+      description: 'Leading Android development for MB Way, Portugal\'s largest instant payments platform (3M+ users). Modernizing codebase with Jetpack Compose and Coroutines.',
+      skillsUsed: ['android', 'git', 'kotlin', 'jetpack-compose', 'flow', 'coroutines', 'mvvm'],
     },
     {
-      jobTitle: 'Android engineer',
+      jobTitle: 'Mid/Senior Android Engineer',
       company: 'Boost IT',
-      startDate: new Date(2024, 3, 5), // Note: In JavaScript, months are 0-indexkmmed
-      endDate: new Date(2024, 9, 15),
-      skillsUsed: ['android', 'git', 'mvi', 'jetpack-compose', 'clean-arch', 'kotlin'],
-    },
-    {
-      jobTitle: 'Mobile engineer',
-      company: 'Bosch PT',
-      startDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexkmmed
-      endDate: new Date(2024, 1, 2),
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'jetpack-compose', 'kmm', 'flow', 'kotlin'],
+      city: 'Lisboa',
+      country: 'pt',
+      startDate: new Date(2024, 3, 1), // Abril 2024
+      endDate: new Date(2024, 9, 31), // Outubro 2024
+      description: 'Contributed to an Android solution for supermarket shelf management. Refactored core components for image data and migrated legacy UI to Jetpack Compose.',
+      skillsUsed: ['android', 'git', 'mvi', 'clean-arch', 'jetpack-compose', 'kotlin'],
     },
     {
       jobTitle: 'Mobile Engineer',
+      company: 'Bosch PT',
+      city: 'Aveiro',
+      country: 'pt',
+      startDate: new Date(2022, 5, 1), // Junho 2022
+      endDate: new Date(2024, 0, 31), // Janeiro 2024
+      description: 'Global team building RefineMySite. Developed offline mode, push notifications, and image synchronization for construction-site management.',
+      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'clean-arch', 'flow', 'kmm', 'kotlin'],
+    },
+    {
+      jobTitle: 'Android Engineer',
       company: 'Critical Techworks',
-      startDate: new Date(2019, 4, 6), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2022, 5, 27), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'room db', 'live-data', 'kotlin'],
+      city: 'Lisboa',
+      country: 'pt',
+      startDate: new Date(2019, 4, 1), // Maio 2019
+      endDate: new Date(2022, 5, 30), // Junho 2022
+      description: 'Development of BMW\'s in-car media player. Integrated multiple audio sources (Spotify, CarPlay, USB) and ensured UI consistency for Android Auto.',
+      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'android-auto', 'livedata', 'kotlin'],
     },
     {
-      jobTitle: 'Android developer',
+      jobTitle: 'Android Developer',
       company: 'Ioasys',
-      startDate: new Date(2018, 3, 2), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2019, 0, 4), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['android', 'scrum', 'git', 'mvvm', 'rxjava', 'java'],
+      city: 'Belo Horizonte',
+      country: 'br',
+      startDate: new Date(2018, 3, 1), // Abril 2018
+      endDate: new Date(2019, 0, 31), // Janeiro 2019
+      description: 'Java-based app connecting teachers and bookstores. First experience with MVVM, Room database, and Retrofit.',
+      skillsUsed: ['android', 'java', 'mvvm', 'room', 'retrofit', 'rxjava', 'git'],
     },
     {
-      jobTitle: 'Android developer',
+      jobTitle: 'Android Developer',
       company: 'Life Link',
-      startDate: new Date(2017, 4, 1), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2017, 11, 22), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['android', 'git', 'java', 'bluetooth 4.0'],
+      city: 'Belo Horizonte',
+      country: 'br',
+      startDate: new Date(2017, 4, 1), // Maio 2017
+      endDate: new Date(2017, 11, 31), // Dezembro 2017
+      description: 'Sole developer for a hardware startup. Built an app from scratch to communicate with proprietary Bluetooth 4.0 devices.',
+      skillsUsed: ['android', 'java', 'bluetooth api', 'git'],
     },
     {
       jobTitle: 'Internship',
       company: 'Avenue Code',
-      startDate: new Date(2015, 0, 12), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2016, 9, 7), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['ruby-on-rails', 'ruby', 'postgresql', 'git', 'scrum'],
-    },
-    {
-      jobTitle: 'Internship',
-      company: 'GDAX Contact Center',
-      startDate: new Date(2014, 9, 6), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2015, 0, 9), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['php', 'mysql'],
-    },
-    {
-      jobTitle: 'Vacation internship',
-      company: 'TCA',
-      startDate: new Date(2014, 5, 2), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2014, 6, 2), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: ['php', 'mysql'],
-    },
-    {
-      jobTitle: 'Digital introduction instructor',
-      company: 'Autonomous',
-      startDate: new Date(2009, 6, 1), // Note: In JavaScript, months are 0-indexed
-      endDate: new Date(2017, 6, 31), // Note: In JavaScript, months are 0-indexed
-      skillsUsed: [],
+      city: 'Belo Horizonte',
+      country: 'br',
+      startDate: new Date(2015, 0, 1), // Janeiro 2015
+      endDate: new Date(2016, 9, 31), // Outubro 2016
+      description: 'Contributed to ACDC, an internal HR platform for time tracking. Worked with Ruby on Rails and Angular in a global team environment.',
+      skillsUsed: ['ruby-on-rails', 'angular', 'postgresql', 'git', 'scrum'],
     },
   ],
   languages: [
@@ -98,6 +98,23 @@ const resumeData = {
     },
   ],
 };
+
+function diffInMonths(startDate, endDate) {
+  const start = new Date(startDate);
+  const end = endDate ? new Date(endDate) : new Date();
+
+  // Diferença bruta de meses baseada apenas em ano e mês
+  let months = (end.getFullYear() - start.getFullYear()) * 12;
+  months += end.getMonth() - start.getMonth();
+
+  // AJUSTE CRUCIAL: Se o dia atual for menor que o dia de início, 
+  // o último mês ainda não completou um ciclo de 30 dias.
+  if (end.getDate() < start.getDate()) {
+    months--;
+  }
+
+  return months <= 0 ? 0 : months;
+}
 
 function openGithub() {
   gtag('event', 'recruiter_open_link', {
@@ -147,26 +164,24 @@ function getAge() {
 
 function emailToClipboard() {
   navigator.clipboard.writeText(resumeData["email"]);
+
+  gtag('event', 'contact_intent', {
+    'event_category': 'Contact',
+    'event_label': 'Email Copy'
+  });
 }
 
 function fetchSkillsSummary() {
   const skillExperienceMap = {};
 
-  // Iterate through each experience entry
   resumeData.experiences.forEach((experience) => {
     const { skillsUsed, startDate, endDate } = experience;
 
-    // Calculate the duration of the experience in months
-    const startYear = startDate.getFullYear();
-    const startMonth = startDate.getMonth();
-    const endYear = endDate ? endDate.getFullYear() : new Date().getFullYear();
-    const endMonth = endDate ? endDate.getMonth() : new Date().getMonth();
+    // Usando a função precisa de meses
+    const totalMonths = diffInMonths(startDate, endDate);
 
-    const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
-
-    // Iterate through the skills used in this experience
     skillsUsed.forEach((skill) => {
-      if (resumeData.stackToDisplay.includes(skill)) { // Only include skills in stackToDisplay
+      if (resumeData.stackToDisplay.includes(skill)) {
         if (!skillExperienceMap[skill]) {
           skillExperienceMap[skill] = 0;
         }
@@ -205,11 +220,10 @@ function formatMonthsAsDuration(months) {
 
 function experienceTimeInMonths() {
   const currentDate = new Date();
-  //in my case I'm ignoring the first experience in the count because it was not a coding experience
+  // Pega a penúltima experiência como você definiu originalmente
   const date = resumeData.experiences[resumeData.experiences.length - 2].startDate;
-  const yearsDiff = currentDate.getFullYear() - date.getFullYear();
-  const monthsDiff = currentDate.getMonth() - date.getMonth();
-  return yearsDiff * 12 + monthsDiff;
+
+  return diffInMonths(date, currentDate);
 }
 
 function sortObjectByValueDesc(inputObject) {
