@@ -13,12 +13,22 @@ const resumeData = {
   description: 'Software engineer with experience in native Android development using Kotlin and Java, along with a strong background in libraries and frameworks for the platform. Recently, I have been expanding my skill set into data science, data analysis, and machine learning, exploring new ways to solve problems with data-driven approaches. I rely on a self-task list and a professional journal to track my activities, progress, and upcoming tasks. Jiu-jitsu is my favorite hobby, and I practice it three times a week, which has greatly contributed to my personal and professional growth.',
   experiences: [
     {
+      jobTitle: 'Android engineer',
+      company: 'AB Inbev',
+      city: 'Remote',
+      country: 'br',
+      startDate: new Date(2026, 2, 27), // Março 2026
+      endDate: null,
+      description: 'Contributing to the maintenance, continuous improvement, and development of new features for the Bees Force application. Focused on ensuring code stability, platform efficiency, and the implementation of scalable solutions.',
+      skillsUsed: ['android', 'kotlin', 'jetpack-compose', 'clean-arch'],
+    },
+    {
       jobTitle: 'Senior Android Engineer',
       company: 'Aubay',
       city: 'Lisboa',
       country: 'pt',
       startDate: new Date(2024, 10, 1), // Novembro 2024
-      endDate: null,
+      endDate: new Date(2026, 2, 27), // Março 2026
       description: 'Leading Android development for MB Way, Portugal\'s largest instant payments platform (3M+ users). Modernizing codebase with Jetpack Compose and Coroutines.',
       skillsUsed: ['android', 'git', 'kotlin', 'jetpack-compose', 'flow', 'coroutines', 'mvvm'],
     },
@@ -419,4 +429,4 @@ $('a.smooth-scroll')
         });
       }
     }
-  });
+  });s
